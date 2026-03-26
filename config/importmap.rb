@@ -1,0 +1,7 @@
+pin "bpmn_js_rails", to: "bpmn_js_rails/index.js"
+pin "bpmn_js_rails/controllers/bpmn_js_viewer_controller", to: "bpmn_js_rails/controllers/bpmn_js_viewer_controller.js"
+pin "bpmn_js_rails/controllers/bpmn_js_modeler_controller", to: "bpmn_js_rails/controllers/bpmn_js_modeler_controller.js"
+pin "bpmn_js_rails/controllers/form_js_viewer_controller", to: "bpmn_js_rails/controllers/form_js_viewer_controller.js"
+pin "bpmn_js_rails/controllers/form_js_editor_controller", to: "bpmn_js_rails/controllers/form_js_editor_controller.js"
+pin "bpmn_js_rails/controllers/dmn_js_viewer_controller", to: "bpmn_js_rails/controllers/dmn_js_viewer_controller.js"
+pin "bpmn_js_rails/controllers/dmn_js_modeler_controller", to: "bpmn_js_rails/controllers/dmn_js_modeler_controller.js"

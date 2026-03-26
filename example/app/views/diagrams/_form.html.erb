@@ -1,0 +1,37 @@
+<%= form_with(model: diagram, url: diagram.persisted? ? diagram_path(diagram) : diagrams_path) do |f| %>
+  <% if diagram.errors.any? %>
+    <div style="color: red; margin-bottom: 16px;">
+      <h3><%= pluralize(diagram.errors.count, "error") %> prohibited this diagram from being saved:</h3>
+      <ul>
+        <% diagram.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :name %>
+    <%= f.text_field :name, style: "width: 100%; padding: 8px; box-sizing: border-box;" %>
+  </div>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 3, style: "width: 100%; padding: 8px; box-sizing: border-box;" %>
+  </div>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :status %>
+    <%= f.select :status, BpmnJsRails::Diagram::STATUSES, {}, style: "padding: 8px;" %>
+  </div>
+
+  <h3>Diagram Modeler</h3>
+
+  <div style="border: 1px solid #ddd; border-radius: 4px; margin-bottom: 16px;">
+    <%= bpmn_js_modeler(diagram, field_name: "diagram[xml]") %>
+  </div>
+
+  <div>
+    <%= f.submit style: "padding: 8px 24px; cursor: pointer;" %>
+  </div>
+<% end %>

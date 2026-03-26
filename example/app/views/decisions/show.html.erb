@@ -1,0 +1,19 @@
+<h1><%= @decision.name %></h1>
+
+<% if @decision.description.present? %>
+  <p><%= @decision.description %></p>
+<% end %>
+
+<p>
+  <strong>Status:</strong> <%= @decision.status %> |
+  <strong>Version:</strong> <%= @decision.version %>
+</p>
+
+<div id="decision-viewer-wrapper" style="border: 1px solid #ddd; border-radius: 4px; padding: 16px; margin: 16px 0;">
+  <%= dmn_js_viewer(@decision) %>
+</div>
+
+<p>
+  <%= link_to "Edit", edit_decision_path(@decision) %> |
+  <%= link_to "Back to decisions", decisions_path %>
+</p>

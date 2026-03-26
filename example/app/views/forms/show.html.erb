@@ -1,0 +1,33 @@
+<h1><%= @form.name %></h1>
+
+<% if @form.description.present? %>
+  <p><%= @form.description %></p>
+<% end %>
+
+<p>
+  <strong>Status:</strong> <%= @form.status %> |
+  <strong>Version:</strong> <%= @form.version %>
+</p>
+
+<div id="form-viewer-wrapper" style="border: 1px solid #ddd; border-radius: 4px; padding: 16px; margin: 16px 0;">
+  <%= form_js_viewer(@form) %>
+</div>
+
+<div id="submission-output" style="display: none; margin: 16px 0; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+  <h3>Submission Data</h3>
+  <pre id="submission-data"></pre>
+</div>
+
+<script>
+  document.addEventListener('form-js-viewer:submit', function(event) {
+    var output = document.getElementById('submission-output');
+    var pre = document.getElementById('submission-data');
+    output.style.display = 'block';
+    pre.textContent = JSON.stringify(event.detail, null, 2);
+  });
+</script>
+
+<p>
+  <%= link_to "Edit", edit_form_path(@form) %> |
+  <%= link_to "Back to forms", forms_path %>
+</p>

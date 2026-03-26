@@ -1,0 +1,36 @@
+<h1>Forms</h1>
+
+<p><%= link_to "New Form", new_form_path %></p>
+
+<% if @forms.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Version</th>
+        <th>Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @forms.each do |form| %>
+        <tr>
+          <td><%= link_to form.name, form %></td>
+          <td><%= truncate(form.description.to_s, length: 60) %></td>
+          <td><%= form.status %></td>
+          <td><%= form.version %></td>
+          <td><%= time_ago_in_words(form.updated_at) %> ago</td>
+          <td>
+            <%= link_to "View", form %> |
+            <%= link_to "Edit", edit_form_path(form) %> |
+            <%= link_to "Delete", form, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No forms yet. <%= link_to "Create one", new_form_path %>.</p>
+<% end %>

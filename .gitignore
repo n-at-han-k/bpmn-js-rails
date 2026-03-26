@@ -1,0 +1,17 @@
+/.bundle/
+/doc/
+/log/*.log
+/pkg/
+/tmp/
+/vendor/
+/example/db/*.sqlite3
+/example/db/*.sqlite3-*
+/example/log/*.log
+/example/storage/
+/example/tmp/
+/example/config/master.key
+/example/config/credentials.yml.enc
+.direnv/
+/mirrors
+.gems
+.gem

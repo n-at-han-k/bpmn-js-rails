@@ -1,0 +1,36 @@
+<h1>Diagrams</h1>
+
+<p><%= link_to "New Diagram", new_diagram_path %></p>
+
+<% if @diagrams.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Version</th>
+        <th>Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @diagrams.each do |diagram| %>
+        <tr>
+          <td><%= link_to diagram.name, diagram %></td>
+          <td><%= truncate(diagram.description.to_s, length: 60) %></td>
+          <td><%= diagram.status %></td>
+          <td><%= diagram.version %></td>
+          <td><%= time_ago_in_words(diagram.updated_at) %> ago</td>
+          <td>
+            <%= link_to "View", diagram %> |
+            <%= link_to "Edit", edit_diagram_path(diagram) %> |
+            <%= link_to "Delete", diagram, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No diagrams yet. <%= link_to "Create one", new_diagram_path %>.</p>
+<% end %>

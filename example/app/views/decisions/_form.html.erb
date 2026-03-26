@@ -1,0 +1,37 @@
+<%= form_with(model: decision, url: decision.persisted? ? decision_path(decision) : decisions_path) do |f| %>
+  <% if decision.errors.any? %>
+    <div style="color: red; margin-bottom: 16px;">
+      <h3><%= pluralize(decision.errors.count, "error") %> prohibited this decision from being saved:</h3>
+      <ul>
+        <% decision.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :name %>
+    <%= f.text_field :name, style: "width: 100%; padding: 8px; box-sizing: border-box;" %>
+  </div>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 3, style: "width: 100%; padding: 8px; box-sizing: border-box;" %>
+  </div>
+
+  <div style="margin-bottom: 12px;">
+    <%= f.label :status %>
+    <%= f.select :status, BpmnJsRails::Decision::STATUSES, {}, style: "padding: 8px;" %>
+  </div>
+
+  <h3>Decision Modeler</h3>
+
+  <div style="border: 1px solid #ddd; border-radius: 4px; margin-bottom: 16px;">
+    <%= dmn_js_modeler(decision, field_name: "decision[xml]") %>
+  </div>
+
+  <div>
+    <%= f.submit style: "padding: 8px 24px; cursor: pointer;" %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+# frozen_string_literal: true
+
+# Mirror repositories
+#
+# Set a source for subsequent mirror declarations:
+#
+#   source "https://github.com"
+#
+# Then declare mirrors with optional custom names:
+#
+#   mirror "user/repo"
+#   mirror "user/other-repo", as: "custom-name"
+#
+# You can change sources mid-file:
+#
+#   source "https://gitlab.com"
+#
+#   mirror "org/project"
+#
+# Or use full URLs without a source:
+#
+#   mirror "https://bitbucket.org/team/repo"
+
+source "https://github.com"
+
+mirror "bpmn-io/form-js"
+mirror "bpmn-io/form-js-examples"
+mirror "bpmn-io/diagram-js"
+mirror "bpmn-io/table-js"
+mirror "bpmn-io/bpmn-js"
+mirror "bpmn-io/cmmn-js"
+mirror "bpmn-io/dmn-js-examples"
+mirror "bpmn-io/bpmn-js-cli"
+mirror "bpmn-io/bpmn-js-embedded-comments"
+mirror "nikku/bpmn-js-native-copy-paste"
+mirror "bpmn-io/diagram-js-grid"
+mirror "bpmn-io/diagram-js-direct-editing"
+mirror "bpmn-io/bpmn-js-examples"
+mirror "bpmn-io/properties-panel"
+mirror "bpmn-io/element-template-playground"
+mirror "bpmn-io/bpmn-js-properties-panel"
+mirror "bpmn-io/draggle"
+mirror "nikku/roll-your-own-bpmn-editor"

@@ -1,0 +1,36 @@
+<h1>Decisions</h1>
+
+<p><%= link_to "New Decision", new_decision_path %></p>
+
+<% if @decisions.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Version</th>
+        <th>Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @decisions.each do |decision| %>
+        <tr>
+          <td><%= link_to decision.name, decision %></td>
+          <td><%= truncate(decision.description.to_s, length: 60) %></td>
+          <td><%= decision.status %></td>
+          <td><%= decision.version %></td>
+          <td><%= time_ago_in_words(decision.updated_at) %> ago</td>
+          <td>
+            <%= link_to "View", decision %> |
+            <%= link_to "Edit", edit_decision_path(decision) %> |
+            <%= link_to "Delete", decision, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No decisions yet. <%= link_to "Create one", new_decision_path %>.</p>
+<% end %>

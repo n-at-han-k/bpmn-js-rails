@@ -1,0 +1,8 @@
+<h1>Edit: <%= @diagram.name %></h1>
+
+<%= render "form", diagram: @diagram %>
+
+<p>
+  <%= link_to "View", @diagram %> |
+  <%= link_to "Back to diagrams", diagrams_path %>
+</p>

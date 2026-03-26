@@ -1,0 +1,8 @@
+<h1>Edit: <%= @decision.name %></h1>
+
+<%= render "form", decision: @decision %>
+
+<p>
+  <%= link_to "View", @decision %> |
+  <%= link_to "Back to decisions", decisions_path %>
+</p>
