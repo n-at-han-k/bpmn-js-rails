@@ -12,7 +12,7 @@ module BpmnJsRails
 
     initializer "bpmn_js_rails.importmap", before: "importmap" do |app|
       if app.config.respond_to?(:importmap)
-        app.config.importmap.paths << root.join("config/importmap.rb")
+        app.config.importmap.paths << Engine.root.join("config/importmap.rb")
       end
     end
 
