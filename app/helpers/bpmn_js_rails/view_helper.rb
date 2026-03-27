@@ -251,6 +251,32 @@ module BpmnJsRails
       end
     end
 
+    # ── PascalCase helpers for .html.ruby views ─────────────────
+
+    def BpmnJsViewer(diagram_or_xml, **html_options)
+      output_buffer << bpmn_js_viewer(diagram_or_xml, **html_options)
+    end
+
+    def BpmnJsModeler(diagram_or_xml, field_name: nil, **html_options)
+      output_buffer << bpmn_js_modeler(diagram_or_xml, field_name: field_name, **html_options)
+    end
+
+    def FormJsViewer(form_or_schema, data: {}, **html_options)
+      output_buffer << form_js_viewer(form_or_schema, data: data, **html_options)
+    end
+
+    def FormJsEditor(form_or_schema, field_name: nil, **html_options)
+      output_buffer << form_js_editor(form_or_schema, field_name: field_name, **html_options)
+    end
+
+    def DmnJsViewer(decision_or_xml, **html_options)
+      output_buffer << dmn_js_viewer(decision_or_xml, **html_options)
+    end
+
+    def DmnJsModeler(decision_or_xml, field_name: nil, **html_options)
+      output_buffer << dmn_js_modeler(decision_or_xml, field_name: field_name, **html_options)
+    end
+
     private
 
     def extract_schema(form_or_schema)
