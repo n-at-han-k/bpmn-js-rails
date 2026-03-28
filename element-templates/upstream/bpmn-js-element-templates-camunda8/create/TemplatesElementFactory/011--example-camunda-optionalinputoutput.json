@@ -1,0 +1,38 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Optional input output",
+  "id": "example.camunda.OptionalInputOutput",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "input-1"
+      }
+    },
+    {
+      "value": "input-2-value",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "input-2"
+      }
+    },
+    {
+      "value": "output-1-value",
+      "binding": {
+        "type": "zeebe:output",
+        "source": "output-1"
+      }
+    },
+    {
+      "optional": true,
+      "binding": {
+        "type": "zeebe:output",
+        "source": "output-2"
+      }
+    }
+  ]
+}

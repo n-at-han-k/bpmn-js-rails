@@ -1,0 +1,13 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/constraints.json",
+  "count": 7,
+  "files": [
+    "001--constraints-empty.json",
+    "002--constraints-minlength.json",
+    "003--constraints-maxlength.json",
+    "004--constraints-notempty.json",
+    "005--constraints-pattern.json",
+    "006--constraints-pattern-custom-message.json",
+    "007--constraints-conditional.json"
+  ]
+}

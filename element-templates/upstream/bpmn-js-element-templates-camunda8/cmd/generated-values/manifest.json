@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/cmd/generated-values.json",
+  "count": 2,
+  "files": [
+    "001--io-camunda-connectors-restconnector-s1.json",
+    "002--example-com-generated.json"
+  ]
+}

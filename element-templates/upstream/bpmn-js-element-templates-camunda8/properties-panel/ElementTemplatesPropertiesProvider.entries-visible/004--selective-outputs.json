@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "selective-outputs",
+  "name": "EntriesVisible={outputs:true}",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [],
+  "entriesVisible": {
+    "outputs": true
+  }
+}

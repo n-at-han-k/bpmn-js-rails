@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/BooleanProperty.json",
+  "count": 6,
+  "files": [
+    "001--booleanfield-feel-disabled.json",
+    "002--booleanfield-feel-required.json",
+    "003--booleanfield-feel-optional.json",
+    "004--booleanfield-feel-static.json",
+    "005--booleanfield-feel-no-feel.json",
+    "006--booleanfield-property.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "DefaultFooBarTask",
+  "id": "com.foo.bar.default",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "isDefault": true,
+  "properties": [
+    {
+      "label": "Label",
+      "type": "Text",
+      "value": "DEFAULT FOO BAR",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

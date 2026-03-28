@@ -1,0 +1,9 @@
+{
+  "name": "without-version",
+  "description": "without-version",
+  "id": "without-version",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": []
+}

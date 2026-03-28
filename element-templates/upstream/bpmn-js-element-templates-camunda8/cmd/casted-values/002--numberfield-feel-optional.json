@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "FEEL optional",
+  "id": "numberField.feel.optional",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "DefaultStaticNumberProperty",
+      "type": "Number",
+      "feel": "static",
+      "value": 123,
+      "binding": {
+        "type": "zeebe:property",
+        "name": "StaticNumberProperty"
+      }
+    },
+    {
+      "label": "DefaultOptionalNumberProperty",
+      "type": "Number",
+      "feel": "optional",
+      "value": 123,
+      "binding": {
+        "type": "zeebe:property",
+        "name": "OptionalNumberProperty"
+      }
+    }
+  ]
+}

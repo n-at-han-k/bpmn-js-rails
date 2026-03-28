@@ -1,0 +1,20 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/properties/CustomProperties.json",
+  "count": 14,
+  "files": [
+    "001--my-connector-task.json",
+    "002--my-mail-task.json",
+    "003--my-awesome-task.json",
+    "004--my-awesome-task-2.json",
+    "005--my-custom-servicetask.json",
+    "006--e-com-merce-fastpath.json",
+    "007--com-mycompany-wscaller.json",
+    "008--my-priority-task.json",
+    "009--com-validated-inputs-task.json",
+    "010--my-caller.json",
+    "011--my-execution-listener-task.json",
+    "012--com-camunda-example-customservicetaskfieldinjection.json",
+    "013--com-camunda-example-externalerrortask.json",
+    "014--com-camunda-example-simpleerrorscope.json"
+  ]
+}

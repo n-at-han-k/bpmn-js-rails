@@ -1,0 +1,12 @@
+{
+  "name": "Deprecated Task",
+  "id": "deprecated",
+  "deprecated": {
+    "message": "Removed without replacement",
+    "documentationRef": "https://localhost/gone"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

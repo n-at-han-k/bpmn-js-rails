@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Catch Duration",
+  "id": "timer-catch-duration",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "id": "timerDuration",
+      "label": "Timer Duration",
+      "type": "String",
+      "value": "PT30M",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDuration"
+      }
+    }
+  ]
+}

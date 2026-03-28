@@ -1,0 +1,10 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/replace-behavior.json",
+  "count": 4,
+  "files": [
+    "001--replace-1.json",
+    "002--replace-elementtype-1.json",
+    "003--replace-2.json",
+    "004--replace-elementtype-2.json"
+  ]
+}

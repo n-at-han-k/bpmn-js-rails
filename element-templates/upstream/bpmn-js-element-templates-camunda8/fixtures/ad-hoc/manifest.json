@@ -1,0 +1,9 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/ad-hoc.json",
+  "count": 3,
+  "files": [
+    "001--com-camunda-example-adhoc.json",
+    "002--io-camunda-connectors-agenticai-aiagent-jobworker-v1.json",
+    "003--io-camunda-examples-adhoc-valid-bpmn.json"
+  ]
+}

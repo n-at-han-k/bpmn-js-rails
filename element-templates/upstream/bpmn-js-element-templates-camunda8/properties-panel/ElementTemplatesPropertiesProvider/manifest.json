@@ -1,0 +1,19 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties-panel/ElementTemplatesPropertiesProvider.json",
+  "count": 13,
+  "files": [
+    "001--deprecated.json",
+    "002--deprecated-upgrade.json",
+    "003--deprecated-upgrade.json",
+    "004--foo.json",
+    "005--foo.json",
+    "006--foo.json",
+    "007--foo.json",
+    "008--default.json",
+    "009--messagetemplate.json",
+    "010--signaltemplate.json",
+    "011--engines.json",
+    "012--engines.json",
+    "013--engines.json"
+  ]
+}

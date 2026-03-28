@@ -1,0 +1,25 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/complex.json",
+  "count": 19,
+  "files": [
+    "001--io-camunda-connectors-restconnector-s1.json",
+    "002--icon-template-salesforce.json",
+    "003--icon-template-sendgrid.json",
+    "004--icon-template-kafka.json",
+    "005--icon-template-jira.json",
+    "006--io-camunda-connectors-restconnector-entriesvisible.json",
+    "007--io-camunda-connectors-restconnector-outdated.json",
+    "008--io-camunda-connectors-restconnector-outdated.json",
+    "009--io-camunda-connectors-restconnector-groups.json",
+    "010--io-camunda-connectors-restconnector-optional.json",
+    "011--io-camunda-connectors-restconnector-feel.json",
+    "012--io-camunda-connectors-restconnector-documentationref.json",
+    "013--com-camunda-example-zeebepropertytype.json",
+    "014--io-camunda-connectors-gitlab-v1.json",
+    "015--com-zeebe-example-boolean-and-number.json",
+    "016--execution-listeners-template.json",
+    "017--user-task-listeners-template.json",
+    "018--combined-listeners-template.json",
+    "019--message-correlation-key-dependant.json"
+  ]
+}

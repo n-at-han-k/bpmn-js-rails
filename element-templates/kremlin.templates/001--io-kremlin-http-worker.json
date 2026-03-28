@@ -1,0 +1,114 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.http-worker",
+  "name": "Kremlin HTTP Worker",
+  "description": "Run a generic HTTP worker job with mapped request settings.",
+  "version": 1,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "groups": [
+    {
+      "id": "job",
+      "label": "Job"
+    },
+    {
+      "id": "request",
+      "label": "Request"
+    }
+  ],
+  "properties": [
+    {
+      "label": "Job type",
+      "description": "Zeebe worker type consumed by your worker process.",
+      "group": "job",
+      "type": "String",
+      "value": "kremlin.http.request",
+      "binding": {
+        "type": "zeebe:taskDefinition",
+        "property": "type"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Retries",
+      "group": "job",
+      "type": "String",
+      "value": "3",
+      "binding": {
+        "type": "zeebe:taskDefinition",
+        "property": "retries"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Method",
+      "description": "HTTP verb sent by the worker.",
+      "group": "request",
+      "type": "Dropdown",
+      "value": "GET",
+      "choices": [
+        {
+          "name": "GET",
+          "value": "GET"
+        },
+        {
+          "name": "POST",
+          "value": "POST"
+        },
+        {
+          "name": "PUT",
+          "value": "PUT"
+        },
+        {
+          "name": "PATCH",
+          "value": "PATCH"
+        },
+        {
+          "name": "DELETE",
+          "value": "DELETE"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "method"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Endpoint",
+      "description": "Absolute URL or FEEL expression resolved by the worker.",
+      "group": "request",
+      "type": "String",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "url"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Body",
+      "description": "Optional payload for non-GET methods.",
+      "group": "request",
+      "type": "Text",
+      "feel": "optional",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      }
+    }
+  ]
+}

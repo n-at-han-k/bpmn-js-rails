@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Element Type",
+  "id": "io.camunda.examples.ElementType",
+  "description": "An example element template that changes the element type.",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "documentationRef": "https://docs.camunda.io/docs/components/modeler/desktop-modeler/element-templates/defining-templates/",
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "Change element type",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

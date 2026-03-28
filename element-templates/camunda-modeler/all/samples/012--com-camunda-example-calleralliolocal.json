@@ -1,0 +1,36 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Caller All IO Local",
+  "id": "com.camunda.example.CallerAllIOLocal",
+  "appliesTo": [
+    "bpmn:CallActivity"
+  ],
+  "properties": [
+    {
+      "label": "Called Process",
+      "type": "String",
+      "editable": false,
+      "value": "calledProcess",
+      "binding": {
+        "type": "property",
+        "name": "calledElement"
+      }
+    },
+    {
+      "label": "Input all local",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:in",
+        "variables": "local"
+      }
+    },
+    {
+      "label": "Output all local",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:out",
+        "variables": "local"
+      }
+    }
+  ]
+}

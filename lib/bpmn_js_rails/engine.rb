@@ -5,7 +5,7 @@ module BpmnJsRails
     isolate_namespace BpmnJsRails
 
     initializer "bpmn_js_rails.assets" do |app|
-      app.config.assets.paths << root.join("app/assets/javascripts")
+      app.config.assets.paths << root.join("app/assets/builds")
       app.config.assets.paths << root.join("app/assets/stylesheets")
       app.config.assets.paths << root.join("app/javascript")
     end

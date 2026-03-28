@@ -22,6 +22,7 @@
             pkgs.nodejs # Assets
             pkgs.libyaml # psych gem
             pkgs.openssl # openssl gem
+            pkgs.yarn
           ];
 
           shellHook = ''

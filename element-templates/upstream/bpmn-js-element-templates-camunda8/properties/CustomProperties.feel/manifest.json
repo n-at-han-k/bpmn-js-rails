@@ -1,0 +1,9 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.feel.json",
+  "count": 3,
+  "files": [
+    "001--my-custom-feeltask-string.json",
+    "002--my-custom-feeltask-text.json",
+    "003--my-custom-feeltask-validation.json"
+  ]
+}

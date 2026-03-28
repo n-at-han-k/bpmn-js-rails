@@ -1,0 +1,32 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Execution Listeners Template",
+  "version": 1,
+  "id": "execution-listeners-template",
+  "appliesTo": [
+    "bpmn:Task",
+    "bpmn:UserTask"
+  ],
+  "entriesVisible": {
+    "executionListeners": false
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "=template-start",
+      "binding": {
+        "type": "zeebe:executionListener",
+        "eventType": "start",
+        "retries": "=3"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=template-end",
+      "binding": {
+        "type": "zeebe:executionListener",
+        "eventType": "end"
+      }
+    }
+  ]
+}

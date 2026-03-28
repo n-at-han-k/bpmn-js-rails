@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Event Subprocess Duration",
+  "id": "timer-subprocess-duration",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "id": "timerDuration",
+      "label": "Timer Duration",
+      "type": "String",
+      "value": "PT10M",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDuration"
+      }
+    }
+  ]
+}

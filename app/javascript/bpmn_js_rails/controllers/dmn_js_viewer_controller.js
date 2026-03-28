@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import DmnViewer from "bpmn_js_rails/dmn_viewer"
 
 // Connects to data-controller="dmn-js-viewer"
 //
@@ -19,12 +20,7 @@ export default class extends Controller {
   }
 
   async connect() {
-    if (typeof DmnJS === "undefined") {
-      console.error("[bpmn-js-rails] DmnJS global not found. Make sure dmn-viewer.production.min.js or dmn-modeler.production.min.js is loaded.")
-      return
-    }
-
-    this.viewer = new DmnJS({ container: this.element })
+    this.viewer = new DmnViewer({ container: this.element })
 
     if (this.xmlValue) {
       try {

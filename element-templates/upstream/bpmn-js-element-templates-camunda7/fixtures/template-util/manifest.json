@@ -1,0 +1,13 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/template-util.json",
+  "count": 7,
+  "files": [
+    "001--foo.json",
+    "002--foo.json",
+    "003--foo.json",
+    "004--bar.json",
+    "005--bar.json",
+    "006--baz.json",
+    "007--qux.json"
+  ]
+}

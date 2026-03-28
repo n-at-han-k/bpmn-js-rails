@@ -1,0 +1,17 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/timer-templates.json",
+  "count": 11,
+  "files": [
+    "001--io-camunda-examples-timerstartcyclecron.json",
+    "002--io-camunda-examples-timerstartcycleiso.json",
+    "003--io-camunda-examples-timerstartdate.json",
+    "004--io-camunda-examples-timerstartdatefeel.json",
+    "005--io-camunda-examples-timercatchduration.json",
+    "006--io-camunda-examples-timercatchdurationfeel.json",
+    "007--io-camunda-examples-timerstartdurationfeel.json",
+    "008--io-camunda-examples-timercatchdate.json",
+    "009--io-camunda-examples-timerboundaryduration.json",
+    "010--io-camunda-examples-timerboundarydate.json",
+    "011--io-camunda-examples-timerboundarycycle.json"
+  ]
+}

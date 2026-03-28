@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "replace_elementType_2",
+  "id": "replace_elementType_2",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task",
+    "bpmn:ServiceTask"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "properties": []
+}

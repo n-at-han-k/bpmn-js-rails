@@ -1,0 +1,10 @@
+{
+  "id": "example.engines.test.basic",
+  "name": "<engines> Test - Basic",
+  "description": "always matches",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/engines.json",
+  "count": 6,
+  "files": [
+    "001--example-engines-test-multiple.json",
+    "002--example-engines-test-multiple.json",
+    "003--example-engines-test-basic.json",
+    "004--example-engines-test-basic.json",
+    "005--example-engines-test-basic.json",
+    "006--example-engines-test-incompatible.json"
+  ]
+}

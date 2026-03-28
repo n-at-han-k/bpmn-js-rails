@@ -1,0 +1,72 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.camunda.examples.ScriptWorker",
+  "name": "Script Worker",
+  "description": "A script task worker",
+  "appliesTo": [
+    "bpmn:ScriptTask"
+  ],
+  "properties": [
+    {
+      "label": "Job type",
+      "type": "String",
+      "value": "script",
+      "group": "job-definition",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "label": "Language",
+      "value": "javascript",
+      "type": "Dropdown",
+      "choices": [
+        {
+          "name": "FEEL",
+          "value": "feel"
+        },
+        {
+          "name": "Groovy",
+          "value": "groovy"
+        },
+        {
+          "name": "JavaScript",
+          "value": "javascript"
+        },
+        {
+          "name": "Kotlin",
+          "value": "kotlin"
+        },
+        {
+          "name": "Mustache",
+          "value": "mustache"
+        }
+      ],
+      "group": "script",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "language"
+      }
+    },
+    {
+      "label": "Script",
+      "value": "a + b",
+      "type": "Text",
+      "group": "script",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "script"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "job-definition",
+      "label": "Job definition"
+    },
+    {
+      "id": "script",
+      "label": "Script"
+    }
+  ]
+}

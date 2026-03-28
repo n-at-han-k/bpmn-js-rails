@@ -1,0 +1,13 @@
+{
+  "id": "example.engines.test.basic",
+  "name": "<engines> Test - Basic",
+  "description": "matches if { camunda: ^8.6 }, or if no <camunda> engine is provided",
+  "version": 3,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

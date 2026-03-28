@@ -1,0 +1,10 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/message.json",
+  "count": 4,
+  "files": [
+    "001--messageeventtemplate.json",
+    "002--messageeventsubscriptiontemplate.json",
+    "003--messageeventtemplatereceivetask.json",
+    "004--messageeventsubscriptiontemplatereceivetask.json"
+  ]
+}

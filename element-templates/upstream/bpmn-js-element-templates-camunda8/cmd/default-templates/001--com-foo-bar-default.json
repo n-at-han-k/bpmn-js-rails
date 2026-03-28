@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Default Task",
+  "id": "com.foo.bar.default",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "isDefault": true,
+  "properties": [
+    {
+      "label": "Label",
+      "type": "Text",
+      "value": "DEFAULT FOO BAR",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

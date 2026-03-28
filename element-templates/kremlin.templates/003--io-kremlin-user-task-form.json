@@ -1,0 +1,27 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.user-task-form",
+  "name": "Kremlin User Task Form",
+  "description": "Attach a generated form id to a user task.",
+  "version": 1,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "properties": [
+    {
+      "label": "Form ID",
+      "description": "Camunda form id deployed with this process.",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:formDefinition",
+        "property": "formId"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    }
+  ]
+}

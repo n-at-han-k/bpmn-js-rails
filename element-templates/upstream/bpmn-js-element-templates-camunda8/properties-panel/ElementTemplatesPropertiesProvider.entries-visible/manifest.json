@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties-panel/ElementTemplatesPropertiesProvider.entries-visible.json",
+  "count": 6,
+  "files": [
+    "001--foo.json",
+    "002--foo.json",
+    "003--default.json",
+    "004--selective-outputs.json",
+    "005--hide-execution-listeners.json",
+    "006--show-task-listeners.json"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "example.engines.test.multiple",
+  "name": "<engines> Test - Multiple",
+  "description": "matches if { camunda: ^7.13, webModeler: ^4.1 } engine is indicated, or properties are not provided",
+  "version": 1,
+  "engines": {
+    "camunda": "^7.13",
+    "webModeler": "^4.1"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

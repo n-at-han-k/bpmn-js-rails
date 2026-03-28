@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Catch Date",
+  "id": "timer-catch-date",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "id": "timerDate",
+      "label": "Timer Date",
+      "type": "String",
+      "value": "2025-12-25T10:00:00Z",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDate"
+      }
+    }
+  ]
+}

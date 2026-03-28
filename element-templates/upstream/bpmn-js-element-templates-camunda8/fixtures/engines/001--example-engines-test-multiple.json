@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "example.engines.test.multiple",
+  "name": "<engines> Test - Multiple",
+  "description": "does not match if { desktopModeler: >=1 } is provided",
+  "version": 2,
+  "engines": {
+    "camunda": "^8.6",
+    "webModeler": "^4.1",
+    "desktopModeler": "^0"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

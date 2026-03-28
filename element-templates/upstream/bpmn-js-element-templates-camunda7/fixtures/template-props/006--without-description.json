@@ -1,0 +1,8 @@
+{
+  "name": "without-description",
+  "id": "without-description",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": []
+}

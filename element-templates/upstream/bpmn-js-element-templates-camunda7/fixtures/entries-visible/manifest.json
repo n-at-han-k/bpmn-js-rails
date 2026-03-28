@@ -1,0 +1,11 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/entries-visible.json",
+  "count": 5,
+  "files": [
+    "001--foo.json",
+    "002--foo.json",
+    "003--default.json",
+    "004--virtualinputoutput.json",
+    "005--input-output-error.json"
+  ]
+}

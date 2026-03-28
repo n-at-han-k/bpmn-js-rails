@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Non-Timer Start Template",
+  "id": "non-timer-start-template",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "properties": [
+    {
+      "label": "Name",
+      "type": "String",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

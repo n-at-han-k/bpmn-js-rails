@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Compatibility test - incompatible, no upgrade",
+  "id": "io.camunda.examples.incompatible",
+  "version": 2,
+  "description": "This version is not compatible with Desktop Modeler and Camunda 8",
+  "engines": {
+    "camunda": "^9",
+    "camundaDesktopModeler": "0"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

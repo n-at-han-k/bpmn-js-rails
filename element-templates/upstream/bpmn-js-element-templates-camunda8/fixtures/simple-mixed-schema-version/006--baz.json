@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema@99.99.99/resources/schema.json",
+  "id": "baz",
+  "name": "Baz",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

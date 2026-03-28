@@ -1,0 +1,180 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.http-connector.advanced",
+  "name": "Kremlin HTTP Connector (Advanced)",
+  "description": "HTTP task with grouped fields and conditional auth inputs.",
+  "version": 1,
+  "engines": {
+    "camunda": ">=8.6"
+  },
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "groups": [
+    {
+      "id": "request",
+      "label": "Request"
+    },
+    {
+      "id": "auth",
+      "label": "Authentication"
+    },
+    {
+      "id": "mapping",
+      "label": "Response Mapping"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "kremlin.http.request",
+      "binding": {
+        "type": "zeebe:taskDefinition",
+        "property": "type"
+      }
+    },
+    {
+      "label": "Endpoint URL",
+      "group": "request",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "url"
+      },
+      "constraints": {
+        "notEmpty": true,
+        "pattern": {
+          "value": "^https?://.*",
+          "message": "Must be an http(s) URL."
+        }
+      }
+    },
+    {
+      "id": "httpMethod",
+      "label": "Method",
+      "group": "request",
+      "type": "Dropdown",
+      "value": "get",
+      "choices": [
+        {
+          "name": "GET",
+          "value": "get"
+        },
+        {
+          "name": "POST",
+          "value": "post"
+        },
+        {
+          "name": "PATCH",
+          "value": "patch"
+        },
+        {
+          "name": "DELETE",
+          "value": "delete"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "method"
+      }
+    },
+    {
+      "label": "Request Body",
+      "group": "request",
+      "type": "Text",
+      "optional": true,
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      },
+      "condition": {
+        "property": "httpMethod",
+        "oneOf": [
+          "post",
+          "patch",
+          "delete"
+        ]
+      }
+    },
+    {
+      "id": "authType",
+      "label": "Authentication",
+      "group": "auth",
+      "type": "Dropdown",
+      "value": "none",
+      "choices": [
+        {
+          "name": "None",
+          "value": "none"
+        },
+        {
+          "name": "Basic",
+          "value": "basic"
+        },
+        {
+          "name": "Bearer",
+          "value": "bearer"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.type"
+      }
+    },
+    {
+      "label": "Username",
+      "group": "auth",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.username"
+      },
+      "condition": {
+        "property": "authType",
+        "equals": "basic"
+      }
+    },
+    {
+      "label": "Password",
+      "group": "auth",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.password"
+      },
+      "condition": {
+        "property": "authType",
+        "equals": "basic"
+      }
+    },
+    {
+      "label": "Bearer Token",
+      "group": "auth",
+      "type": "String",
+      "optional": true,
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.token"
+      },
+      "condition": {
+        "property": "authType",
+        "equals": "bearer"
+      }
+    },
+    {
+      "label": "Response Variable",
+      "group": "mapping",
+      "type": "String",
+      "value": "httpResponse",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:output",
+        "source": "= body"
+      }
+    }
+  ]
+}

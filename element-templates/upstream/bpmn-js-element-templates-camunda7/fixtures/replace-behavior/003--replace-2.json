@@ -1,0 +1,10 @@
+{
+  "name": "replace_2",
+  "id": "replace_2",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task",
+    "bpmn:CallActivity"
+  ],
+  "properties": []
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Form Definition Template with Binding Type",
+  "id": "io.camunda.examples.FormDefinition.BindingType",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "category": {
+    "name": "With binding type",
+    "id": "with-binding-type"
+  },
+  "elementType": {
+    "value": "bpmn:UserTask"
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:userTask"
+      }
+    },
+    {
+      "type": "String",
+      "value": "aFormId",
+      "binding": {
+        "type": "zeebe:formDefinition",
+        "property": "formId"
+      }
+    },
+    {
+      "type": "Dropdown",
+      "label": "Binding",
+      "id": "bindingType",
+      "binding": {
+        "type": "zeebe:formDefinition",
+        "property": "bindingType"
+      },
+      "choices": [
+        {
+          "name": "Latest",
+          "value": "latest"
+        },
+        {
+          "name": "Deployment",
+          "value": "deployment"
+        },
+        {
+          "name": "Version Tag",
+          "value": "versionTag"
+        }
+      ],
+      "value": "latest"
+    },
+    {
+      "type": "String",
+      "label": "Version tag",
+      "value": "v1",
+      "binding": {
+        "type": "zeebe:formDefinition",
+        "property": "versionTag"
+      },
+      "condition": {
+        "property": "bindingType",
+        "equals": "versionTag"
+      }
+    }
+  ]
+}

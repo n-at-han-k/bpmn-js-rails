@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.text-language.json",
+  "count": 1,
+  "files": [
+    "001--my-example-custom-language-text.json"
+  ]
+}

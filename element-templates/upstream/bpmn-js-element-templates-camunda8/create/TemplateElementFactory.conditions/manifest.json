@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/create/TemplateElementFactory.conditions.json",
+  "count": 2,
+  "files": [
+    "001--example-camunda-condition.json",
+    "002--example-camunda-condition-unordered.json"
+  ]
+}

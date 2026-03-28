@@ -1,0 +1,35 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.camunda.examples.KafkaTask",
+  "name": "Kafka worker",
+  "description": "A kafka task worker",
+  "appliesTo": [
+    "bpmn:ServiceTask",
+    "bpmn:SendTask"
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "kafka",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "label": "Method",
+      "value": "payment",
+      "type": "String",
+      "group": "headers",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "kafka-topic"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "headers",
+      "label": "Headers"
+    }
+  ]
+}

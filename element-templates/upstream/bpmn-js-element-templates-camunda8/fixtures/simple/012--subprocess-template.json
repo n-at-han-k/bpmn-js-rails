@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "subprocess-template",
+  "name": "Subprocess Template",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:SubProcess"
+  ],
+  "properties": []
+}

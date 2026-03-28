@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Rest Template (hidden)",
+  "id": "com.example.rest-hidden",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "task-type",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    }
+  ]
+}

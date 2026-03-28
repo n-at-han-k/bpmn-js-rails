@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Documentation URL",
+  "id": "io.camunda.examples.DocumentationRef",
+  "description": "An example element template with documentation URL.",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "documentationRef": "https://docs.camunda.io/docs/components/modeler/desktop-modeler/element-templates/",
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "With documentationRef",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

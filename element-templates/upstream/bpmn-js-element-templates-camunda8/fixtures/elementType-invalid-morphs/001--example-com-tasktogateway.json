@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Element Type (Task -> Gateway)",
+  "id": "example.com.TaskToGateway",
+  "appliesTo": [
+    "bpmn:ServiceTask",
+    "bpmn:ExclusiveGateway"
+  ],
+  "elementType": {
+    "value": "bpmn:ExclusiveGateway"
+  },
+  "properties": []
+}

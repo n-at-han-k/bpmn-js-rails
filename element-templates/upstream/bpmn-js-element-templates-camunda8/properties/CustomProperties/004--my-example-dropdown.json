@@ -1,0 +1,33 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Task Template 2",
+  "id": "my.example.dropdown",
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "properties": [
+    {
+      "label": "Name",
+      "type": "Dropdown",
+      "choices": [
+        {
+          "name": "low",
+          "value": "low"
+        },
+        {
+          "name": "medium",
+          "value": "medium"
+        },
+        {
+          "name": "high",
+          "value": "high"
+        }
+      ],
+      "value": "low",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

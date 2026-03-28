@@ -1,0 +1,8 @@
+{
+  "id": "subprocess-template",
+  "name": "Foo",
+  "appliesTo": [
+    "bpmn:SubProcess"
+  ],
+  "properties": []
+}

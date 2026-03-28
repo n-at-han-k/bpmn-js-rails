@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/optional-valid.json",
+  "count": 1,
+  "files": [
+    "001--valid-optional-bindings.json"
+  ]
+}

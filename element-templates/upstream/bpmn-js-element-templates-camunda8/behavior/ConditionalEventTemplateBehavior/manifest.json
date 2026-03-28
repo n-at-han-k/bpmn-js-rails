@@ -1,0 +1,10 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/behavior/ConditionalEventTemplateBehavior.json",
+  "count": 4,
+  "files": [
+    "001--conditional-with-variable-events-template.json",
+    "002--conditional-no-variable-events-template.json",
+    "003--conditional-catch-with-variable-events-template.json",
+    "004--conditional-boundary-event-template.json"
+  ]
+}

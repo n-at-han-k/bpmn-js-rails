@@ -1,24 +1,33 @@
-# README
+# bpmn-js-rails example app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This example app mounts the engine and exercises BPMN, DMN, and form editors/viewers.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+```bash
+bundle install
+yarn install
+yarn build
+bundle exec rails db:prepare
+bundle exec rails server
+```
 
-* System dependencies
+## Development workflow
 
-* Configuration
+In one terminal, keep engine bundles up to date:
 
-* Database creation
+```bash
+yarn build:watch
+```
 
-* Database initialization
+In another terminal, run the example app:
 
-* How to run the test suite
+```bash
+bundle exec rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Notes
 
-* Deployment instructions
-
-* ...
+- This engine now uses esbuild + importmap for JavaScript delivery.
+- Legacy UMD assets are not used.
+- If you update files in `app/javascript/bpmn_js_rails/entrypoints`, rebuild with `yarn build` before testing or releasing.

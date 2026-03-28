@@ -1,0 +1,27 @@
+{
+  "name": "AsyncAwesomeTask",
+  "id": "my.awesome.Task_2",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "label": "Are you awesome?",
+      "type": "Boolean",
+      "value": true,
+      "binding": {
+        "type": "property",
+        "name": "camunda:asyncBefore"
+      }
+    },
+    {
+      "label": "Priority",
+      "type": "String",
+      "binding": {
+        "type": "property",
+        "name": "camunda:jobPriority"
+      }
+    }
+  ],
+  "entriesVisible": true
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Output binding",
+  "id": "example.camunda.OutputBinding",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "value": "output-1-value",
+      "binding": {
+        "type": "zeebe:output",
+        "source": "output-1"
+      }
+    },
+    {
+      "value": "output-2-value",
+      "binding": {
+        "type": "zeebe:output",
+        "source": "output-2"
+      }
+    },
+    {
+      "value": "output-3-value",
+      "binding": {
+        "type": "zeebe:output",
+        "source": "output-3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/cmd/generated-values-signal.json",
+  "count": 1,
+  "files": [
+    "001--example-com-generated-signal.json"
+  ]
+}

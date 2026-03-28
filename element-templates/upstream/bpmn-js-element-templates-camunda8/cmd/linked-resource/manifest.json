@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/cmd/linked-resource.json",
+  "count": 2,
+  "files": [
+    "001--linkedresource.json",
+    "002--linkedresource.json"
+  ]
+}

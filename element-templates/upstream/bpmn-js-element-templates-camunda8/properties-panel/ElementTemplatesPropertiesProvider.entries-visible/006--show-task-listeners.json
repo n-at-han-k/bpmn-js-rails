@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "show-task-listeners",
+  "name": "EntriesVisible={taskListeners:true}",
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "properties": [],
+  "entriesVisible": {
+    "taskListeners": true
+  }
+}

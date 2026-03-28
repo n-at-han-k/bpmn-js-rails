@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Multiple types",
+  "id": "example.camunda.MultipleTypes",
+  "appliesTo": [
+    "bpmn:ServiceTask",
+    "bpmn:SendTask"
+  ],
+  "properties": []
+}

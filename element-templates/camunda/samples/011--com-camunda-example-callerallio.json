@@ -1,0 +1,36 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Caller All IO",
+  "id": "com.camunda.example.CallerAllIO",
+  "appliesTo": [
+    "bpmn:CallActivity"
+  ],
+  "properties": [
+    {
+      "label": "Called Process",
+      "type": "String",
+      "editable": false,
+      "value": "calledProcess",
+      "binding": {
+        "type": "property",
+        "name": "calledElement"
+      }
+    },
+    {
+      "label": "Input all",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:in",
+        "variables": "all"
+      }
+    },
+    {
+      "label": "Output all",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:out",
+        "variables": "all"
+      }
+    }
+  ]
+}

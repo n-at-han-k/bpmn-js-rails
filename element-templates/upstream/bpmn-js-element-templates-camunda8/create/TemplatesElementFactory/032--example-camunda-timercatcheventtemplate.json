@@ -1,0 +1,22 @@
+{
+  "name": "Timer Catch Event Template",
+  "id": "example.camunda.TimerCatchEventTemplate",
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Duration",
+      "type": "String",
+      "value": "PT1H",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDuration"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "kremlin.templates.json",
+  "count": 4,
+  "files": [
+    "001--io-kremlin-http-worker.json",
+    "002--io-kremlin-notify-email.json",
+    "003--io-kremlin-user-task-form.json",
+    "004--io-kremlin-call-process.json"
+  ]
+}

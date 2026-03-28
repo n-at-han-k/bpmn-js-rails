@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/behavior/CalledElementBehavior.json",
+  "count": 1,
+  "files": [
+    "001--io-camunda-examples-payment.json"
+  ]
+}

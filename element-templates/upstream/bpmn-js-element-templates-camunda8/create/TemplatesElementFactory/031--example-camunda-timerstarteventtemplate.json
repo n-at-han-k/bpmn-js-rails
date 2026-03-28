@@ -1,0 +1,22 @@
+{
+  "name": "Timer Start Event Template",
+  "id": "example.camunda.TimerStartEventTemplate",
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Cron Expression",
+      "type": "String",
+      "value": "0 0 9-17 * * MON-FRI",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeCycle"
+      }
+    }
+  ]
+}

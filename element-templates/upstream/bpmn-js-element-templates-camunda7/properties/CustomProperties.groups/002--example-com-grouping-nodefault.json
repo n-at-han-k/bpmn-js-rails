@@ -1,0 +1,32 @@
+{
+  "name": "no default",
+  "id": "example.com.grouping-noDefault",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "inputParameter",
+      "group": "one",
+      "type": "String",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "input1"
+      }
+    },
+    {
+      "label": "inputParameter",
+      "group": "one",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "input2"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "one",
+      "label": "Group one"
+    }
+  ]
+}

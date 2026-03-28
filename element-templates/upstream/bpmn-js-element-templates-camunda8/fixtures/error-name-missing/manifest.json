@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/error-name-missing.json",
+  "count": 1,
+  "files": [
+    "001--invalid.json"
+  ]
+}

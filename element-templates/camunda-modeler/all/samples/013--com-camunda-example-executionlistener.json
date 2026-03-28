@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Execution Listener",
+  "id": "com.camunda.example.ExecutionListener",
+  "appliesTo": [
+    "bpmn:Activity",
+    "bpmn:Event",
+    "bpmn:Gateway"
+  ],
+  "properties": [
+    {
+      "value": "println execution.eventName",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:executionListener",
+        "event": "start",
+        "scriptFormat": "groovy"
+      }
+    },
+    {
+      "value": "println end",
+      "type": "Hidden",
+      "binding": {
+        "type": "camunda:executionListener",
+        "event": "end",
+        "scriptFormat": "groovy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Task header binding",
+  "id": "example.camunda.TaskHeaderBinding",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "value": "header-1-value",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "header-1"
+      }
+    },
+    {
+      "value": "header-2-value",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "header-2"
+      }
+    },
+    {
+      "value": "header-3-value",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "header-3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/ElementTemplates.message-templates.json",
+  "count": 4,
+  "files": [
+    "001--messageeventtemplate.json",
+    "002--updatetemplate.json",
+    "003--updatetemplate.json",
+    "004--messageeventtemplatesendtask.json"
+  ]
+}

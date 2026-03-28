@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Date Start Template",
+  "id": "timer-date-start-template",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Date",
+      "type": "String",
+      "value": "2024-01-01T00:00:00Z",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDate"
+      }
+    }
+  ]
+}

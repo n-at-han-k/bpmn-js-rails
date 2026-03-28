@@ -1,0 +1,31 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema@0.7.0/resources/schema.json",
+  "name": "Message Event Template",
+  "id": "messageEventTemplate",
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent",
+    "bpmn:IntermediateThrowEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:MessageEventDefinition"
+  },
+  "properties": [
+    {
+      "type": "String",
+      "value": "name",
+      "binding": {
+        "type": "bpmn:Message#property",
+        "name": "name"
+      }
+    },
+    {
+      "type": "String",
+      "value": "correlationKey",
+      "binding": {
+        "type": "bpmn:Message#zeebe:subscription#property",
+        "name": "correlationKey"
+      }
+    }
+  ]
+}

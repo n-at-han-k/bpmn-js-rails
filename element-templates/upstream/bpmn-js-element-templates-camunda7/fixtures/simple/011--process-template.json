@@ -1,0 +1,8 @@
+{
+  "id": "process-template",
+  "name": "Foo",
+  "appliesTo": [
+    "bpmn:Process"
+  ],
+  "properties": []
+}

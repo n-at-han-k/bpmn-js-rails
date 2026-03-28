@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Field Injections",
+  "id": "com.camunda.example.FieldInjections",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Field Injection String",
+      "type": "String",
+      "value": "My Field Injection Value",
+      "binding": {
+        "type": "camunda:field",
+        "name": "fieldInjectionString",
+        "expression": false
+      }
+    },
+    {
+      "label": "Field Injection Expression",
+      "type": "String",
+      "value": "${fieldInjectionExpression}",
+      "binding": {
+        "type": "camunda:field",
+        "name": "fieldInjectionExpression",
+        "expression": true
+      }
+    }
+  ]
+}

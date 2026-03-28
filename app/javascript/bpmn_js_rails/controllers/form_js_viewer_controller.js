@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { createForm } from "bpmn_js_rails/form_viewer"
 
 // Connects to data-controller="form-js-viewer"
 //
@@ -21,12 +22,7 @@ export default class extends Controller {
   }
 
   connect() {
-    if (typeof FormViewer === "undefined") {
-      console.error("[bpmn-js-rails] FormViewer global not found. Make sure form-viewer.umd.js is loaded.")
-      return
-    }
-
-    FormViewer.createForm({
+    createForm({
       container: this.element,
       schema: this.schemaValue,
       data: this.dataValue

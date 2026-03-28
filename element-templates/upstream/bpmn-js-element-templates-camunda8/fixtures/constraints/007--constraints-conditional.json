@@ -1,0 +1,35 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Constraints - Conditional",
+  "id": "constraints.conditional",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "id": "nameProperty",
+      "type": "Hidden",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    },
+    {
+      "label": "Test Property",
+      "type": "String",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      },
+      "constraints": {
+        "pattern": {
+          "value": "A+B"
+        }
+      },
+      "condition": {
+        "property": "nameProperty",
+        "equals": "foo"
+      }
+    }
+  ]
+}

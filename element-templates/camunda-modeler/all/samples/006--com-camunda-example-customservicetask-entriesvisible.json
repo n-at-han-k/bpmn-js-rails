@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Custom ServiceTask (Entries visible)",
+  "id": "com.camunda.example.CustomServiceTask-entriesVisible",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "entriesVisible": true,
+  "properties": [
+    {
+      "label": "Delegate to Call",
+      "type": "Hidden",
+      "value": "com.camunda.example.FooDelegate",
+      "binding": {
+        "type": "property",
+        "name": "camunda:delegateExpression"
+      }
+    }
+  ]
+}

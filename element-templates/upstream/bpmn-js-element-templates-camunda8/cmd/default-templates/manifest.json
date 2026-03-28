@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/cmd/default-templates.json",
+  "count": 2,
+  "files": [
+    "001--com-foo-bar-default.json",
+    "002--com-foo-bar-default-flow.json"
+  ]
+}

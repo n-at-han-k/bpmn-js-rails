@@ -1,0 +1,9 @@
+{
+  "name": "Foo 2",
+  "id": "foo",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "properties": []
+}

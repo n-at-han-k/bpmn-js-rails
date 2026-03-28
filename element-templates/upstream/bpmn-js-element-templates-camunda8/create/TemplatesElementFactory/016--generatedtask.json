@@ -1,0 +1,69 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "REST Connector",
+  "id": "generatedTask",
+  "description": "A generic REST service.",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    },
+    {
+      "type": "Hidden",
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "zeebe:input",
+        "name": "input"
+      }
+    },
+    {
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "zeebe:output",
+        "source": "source"
+      }
+    },
+    {
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "zeebe:property",
+        "name": "property"
+      }
+    },
+    {
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "header"
+      }
+    }
+  ]
+}

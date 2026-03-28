@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Constraints - Pattern (custom message)",
+  "id": "constraints.pattern-custom-message",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "label": "Test Property",
+      "type": "String",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      },
+      "constraints": {
+        "pattern": {
+          "value": "A+B",
+          "message": "This is a custom message"
+        }
+      }
+    }
+  ]
+}

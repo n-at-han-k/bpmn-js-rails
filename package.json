@@ -1,0 +1,23 @@
+{
+  "name": "bpmn-js-rails",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/bpmn_js_rails/entrypoints/*.js --bundle --format=esm --sourcemap --outdir=app/assets/builds/bpmn_js_rails --public-path=/assets",
+    "build:watch": "esbuild app/javascript/bpmn_js_rails/entrypoints/*.js --bundle --format=esm --sourcemap --outdir=app/assets/builds/bpmn_js_rails --public-path=/assets --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  },
+  "dependencies": {
+    "@bpmn-io/element-template-chooser": "^2.1.0",
+    "@bpmn-io/form-js": "^1.21.2",
+    "@bpmn-io/properties-panel": "^3.40.5",
+    "bpmn-js": "^18.8.0",
+    "bpmn-js-element-templates": "^2.23.0",
+    "bpmn-js-native-copy-paste": "^0.3.0",
+    "bpmn-js-properties-panel": "^5.53.0",
+    "camunda-bpmn-js-behaviors": "^1.14.1",
+    "dmn-js": "^17.7.0",
+    "preact": "^10.29.0"
+  }
+}

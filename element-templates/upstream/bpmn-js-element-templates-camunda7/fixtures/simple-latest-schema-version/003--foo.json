@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "id": "foo",
+  "name": "Foo 2",
+  "version": 2,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

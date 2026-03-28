@@ -1,0 +1,23 @@
+{
+  "name": "Conditional Start Event Template",
+  "id": "example.camunda.ConditionalStartEventTemplate",
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:ConditionalEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Condition Expression",
+      "type": "String",
+      "feel": "required",
+      "value": "=myVariable > 100",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#property",
+        "name": "condition"
+      }
+    }
+  ]
+}

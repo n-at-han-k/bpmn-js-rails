@@ -1,0 +1,14 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/signal.json",
+  "count": 8,
+  "files": [
+    "001--signaleventtemplate.json",
+    "002--com-camunda-example-validsignalwithfeeloptional.json",
+    "003--com-camunda-example-validsignalstartevent.json",
+    "004--com-camunda-example-validsignalboundaryevent.json",
+    "005--com-camunda-example-validsignalendevent.json",
+    "006--com-camunda-example-validsignalintermediatecatchevent.json",
+    "007--updatesignaltemplate.json",
+    "008--updatesignaltemplate.json"
+  ]
+}

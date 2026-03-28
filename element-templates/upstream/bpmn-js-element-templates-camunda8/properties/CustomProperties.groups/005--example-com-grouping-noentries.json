@@ -1,0 +1,38 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "no entries",
+  "id": "example.com.grouping-noEntries",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "REST Endpoint URL",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "url"
+      }
+    },
+    {
+      "label": "Request Body",
+      "value": "",
+      "group": "payload",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "headers",
+      "label": "Request headers"
+    },
+    {
+      "id": "payload",
+      "label": "Request payload"
+    }
+  ]
+}

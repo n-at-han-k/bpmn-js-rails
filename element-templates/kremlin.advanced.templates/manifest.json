@@ -1,0 +1,9 @@
+{
+  "source": "kremlin.advanced.templates.json",
+  "count": 3,
+  "files": [
+    "001--io-kremlin-http-connector-advanced.json",
+    "002--io-kremlin-policy-retry-and-timeout.json",
+    "003--io-kremlin-event-conditional.json"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "without-metadata",
+  "description": "without-metadata",
+  "id": "without-metadata",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [],
+  "version": 1
+}

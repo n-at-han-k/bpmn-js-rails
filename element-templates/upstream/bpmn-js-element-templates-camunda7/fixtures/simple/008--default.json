@@ -1,0 +1,10 @@
+{
+  "id": "default",
+  "name": "Default Template",
+  "version": 1,
+  "isDefault": true,
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": []
+}

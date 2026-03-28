@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/properties/ErrorProperties.json",
+  "count": 2,
+  "files": [
+    "001--com-example-externaltaskworker.json",
+    "002--com-example-emptytemplate.json"
+  ]
+}

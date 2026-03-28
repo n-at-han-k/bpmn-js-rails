@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/connectors.json",
+  "count": 2,
+  "files": [
+    "001--io-camunda-connectors-emailconnector-s2.json",
+    "002--io-camunda-connectors-restconnector-s1.json"
+  ]
+}

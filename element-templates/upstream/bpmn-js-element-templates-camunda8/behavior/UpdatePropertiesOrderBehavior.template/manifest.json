@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/behavior/UpdatePropertiesOrderBehavior.template.json",
+  "count": 2,
+  "files": [
+    "001--cloud-element-templates-properties-updateproperties-order.json",
+    "002--cloud-element-templates-properties-updateproperties-order-conditions.json"
+  ]
+}

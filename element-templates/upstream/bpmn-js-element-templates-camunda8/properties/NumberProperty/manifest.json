@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/NumberProperty.json",
+  "count": 6,
+  "files": [
+    "001--numberfield-feel-disabled.json",
+    "002--numberfield-feel-required.json",
+    "003--numberfield-feel-optional.json",
+    "004--numberfield-feel-static.json",
+    "005--numberfield-feel-no-feel.json",
+    "006--numberfield-property.json"
+  ]
+}

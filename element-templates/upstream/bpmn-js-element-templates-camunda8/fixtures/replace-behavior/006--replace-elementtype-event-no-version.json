@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "replace_elementType_event_no_version",
+  "id": "replace_elementType_event_no_version",
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent"
+  },
+  "properties": []
+}

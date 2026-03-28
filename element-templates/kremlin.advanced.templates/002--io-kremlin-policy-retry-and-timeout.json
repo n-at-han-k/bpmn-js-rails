@@ -1,0 +1,59 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.policy.retry-and-timeout",
+  "name": "Kremlin Retry + Timeout Policy",
+  "description": "Demonstrates Number/Boolean controls and FEEL modes.",
+  "version": 1,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Retry Count",
+      "type": "Number",
+      "value": "3",
+      "feel": "static",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "retryCount"
+      }
+    },
+    {
+      "label": "Retry Backoff (seconds)",
+      "type": "Number",
+      "value": "30",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "retryBackoffSeconds"
+      }
+    },
+    {
+      "id": "enableTimeout",
+      "label": "Enable timeout",
+      "type": "Boolean",
+      "value": true,
+      "feel": "static",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "enableTimeout"
+      }
+    },
+    {
+      "label": "Timeout (ISO-8601)",
+      "type": "String",
+      "value": "PT2M",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "timeout"
+      },
+      "condition": {
+        "property": "enableTimeout",
+        "equals": true
+      }
+    }
+  ]
+}

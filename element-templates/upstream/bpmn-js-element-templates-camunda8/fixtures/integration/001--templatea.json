@@ -1,0 +1,53 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Template A (version 1)",
+  "id": "templateA",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "properties": [
+    {
+      "label": "Normal Value",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "normalValue"
+      }
+    },
+    {
+      "label": "Default Value",
+      "value": "A1",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "defaultValue"
+      }
+    },
+    {
+      "label": "Changed Default Value",
+      "value": "A1",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "changedDefaultValue"
+      }
+    },
+    {
+      "label": "Hidden Value",
+      "value": "A1",
+      "type": "Hidden",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "hiddenValue"
+      }
+    }
+  ]
+}

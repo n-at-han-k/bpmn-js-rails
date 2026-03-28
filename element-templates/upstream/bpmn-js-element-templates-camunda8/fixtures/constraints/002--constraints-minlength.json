@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Constraints - Min Length",
+  "id": "constraints.minLength",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "label": "Test Property",
+      "type": "String",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      },
+      "constraints": {
+        "minLength": 5
+      }
+    }
+  ]
+}

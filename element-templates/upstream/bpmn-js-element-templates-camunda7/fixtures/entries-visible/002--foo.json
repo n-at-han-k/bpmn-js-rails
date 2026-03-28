@@ -1,0 +1,9 @@
+{
+  "id": "foo",
+  "name": "EntriesVisible=false",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

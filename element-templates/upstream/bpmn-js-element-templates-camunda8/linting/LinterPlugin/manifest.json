@@ -1,0 +1,20 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/linting/LinterPlugin.json",
+  "count": 14,
+  "files": [
+    "001--constraints-empty.json",
+    "002--constraints-minlength.json",
+    "003--constraints-maxlength.json",
+    "004--constraints-notempty.json",
+    "005--constraints-pattern.json",
+    "006--constraints-pattern-custom-message.json",
+    "007--constraints-conditional.json",
+    "008--feel-minlength.json",
+    "009--feel-maxlength.json",
+    "010--feel-pattern.json",
+    "011--compatible.json",
+    "012--incompatible.json",
+    "013--incompatible-updatable.json",
+    "014--incompatible-updatable.json"
+  ]
+}

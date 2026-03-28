@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/dropdown.json",
+  "count": 1,
+  "files": [
+    "001--com-mycompany-whateverdomain-prioritytask.json"
+  ]
+}

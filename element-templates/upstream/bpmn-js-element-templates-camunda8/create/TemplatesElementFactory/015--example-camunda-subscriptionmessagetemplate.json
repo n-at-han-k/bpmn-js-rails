@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Subscription Message Template",
+  "id": "example.camunda.SubscriptionMessageTemplate",
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:MessageEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "correlationKey",
+      "type": "Hidden",
+      "value": "=variable",
+      "binding": {
+        "type": "bpmn:Message#zeebe:subscription#property",
+        "name": "correlationKey"
+      }
+    }
+  ]
+}

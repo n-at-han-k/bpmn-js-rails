@@ -1,0 +1,25 @@
+{
+  "source": "camunda/samples.json",
+  "count": 19,
+  "files": [
+    "001--com-camunda-example-mailtask.json",
+    "002--com-camunda-example-mailtask-groups.json",
+    "003--my-connector-http-get-task.json",
+    "004--com-camunda-example-awesometask.json",
+    "005--com-camunda-example-customservicetask.json",
+    "006--com-camunda-example-customservicetask-entriesvisible.json",
+    "007--e-com-merce-fastpath.json",
+    "008--com-camunda-example-wscaller.json",
+    "009--com-camunda-example-checkinvoicetask.json",
+    "010--com-camunda-example-caller.json",
+    "011--com-camunda-example-callerallio.json",
+    "012--com-camunda-example-calleralliolocal.json",
+    "013--com-camunda-example-executionlistener.json",
+    "014--com-camunda-example-fieldinjections.json",
+    "015--com-camunda-example-defaultrendering.json",
+    "016--com-camunda-example-externalservicetaskwitherrors.json",
+    "017--com-camunda-example-defaulterrorsrendering.json",
+    "018--com-camunda-example-elementtype.json",
+    "019--com-camunda-example-documentationref.json"
+  ]
+}

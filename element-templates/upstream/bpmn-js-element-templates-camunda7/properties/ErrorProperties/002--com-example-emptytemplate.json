@@ -1,0 +1,8 @@
+{
+  "name": "Empty Template",
+  "id": "com.example.EmptyTemplate",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": []
+}

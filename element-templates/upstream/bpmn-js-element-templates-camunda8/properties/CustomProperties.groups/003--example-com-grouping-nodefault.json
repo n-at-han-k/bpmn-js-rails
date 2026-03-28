@@ -1,0 +1,53 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "no default",
+  "id": "example.com.grouping-noDefault",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "REST Endpoint URL",
+      "group": "headers",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "url"
+      }
+    },
+    {
+      "label": "REST Method",
+      "group": "headers",
+      "type": "Dropdown",
+      "value": "get",
+      "choices": [
+        {
+          "name": "GET",
+          "value": "get"
+        },
+        {
+          "name": "POST",
+          "value": "post"
+        },
+        {
+          "name": "PATCH",
+          "value": "patch"
+        },
+        {
+          "name": "DELETE",
+          "value": "delete"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "method"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "headers",
+      "label": "Request headers"
+    }
+  ]
+}

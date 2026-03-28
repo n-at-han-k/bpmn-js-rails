@@ -1,0 +1,9 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/condition-message.json",
+  "count": 3,
+  "files": [
+    "001--example-com-condition.json",
+    "002--example-com-condition-1.json",
+    "003--example-com-condition-short.json"
+  ]
+}

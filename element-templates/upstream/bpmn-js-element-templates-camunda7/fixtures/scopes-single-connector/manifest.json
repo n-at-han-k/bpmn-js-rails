@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/scopes-single-connector.json",
+  "count": 1,
+  "files": [
+    "001--foo.json"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/template-props.json",
+  "count": 6,
+  "files": [
+    "001--16319b98-513f-400e-b596-2944c7530d6c.json",
+    "002--0a7096fb-47e8-4b4c-9da0-ecaee7af225e.json",
+    "003--0a7096fb-47e8-4b4c-9da0-ecaee7af225e.json",
+    "004--without-version.json",
+    "005--without-metadata.json",
+    "006--without-description.json"
+  ]
+}

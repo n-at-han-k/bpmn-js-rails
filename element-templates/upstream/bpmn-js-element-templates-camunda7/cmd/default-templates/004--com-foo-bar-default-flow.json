@@ -1,0 +1,19 @@
+{
+  "name": "DefaultFooBarSequenceFlow",
+  "id": "com.foo.bar.default.flow",
+  "appliesTo": [
+    "bpmn:SequenceFlow"
+  ],
+  "isDefault": true,
+  "properties": [
+    {
+      "label": "Label",
+      "type": "Text",
+      "value": "DEFAULT FOO BAR FLOW",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

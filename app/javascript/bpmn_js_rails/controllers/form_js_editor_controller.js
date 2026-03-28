@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { createFormEditor } from "bpmn_js_rails/form_editor"
 
 // Connects to data-controller="form-js-editor"
 //
@@ -26,14 +27,9 @@ export default class extends Controller {
   static targets = ["container", "schemaField"]
 
   connect() {
-    if (typeof FormEditor === "undefined") {
-      console.error("[bpmn-js-rails] FormEditor global not found. Make sure form-editor.umd.js is loaded.")
-      return
-    }
-
     const renderTarget = this.hasContainerTarget ? this.containerTarget : this.element
 
-    FormEditor.createFormEditor({
+    createFormEditor({
       container: renderTarget,
       schema: this.schemaValue
     }).then((editor) => {

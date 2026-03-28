@@ -1,0 +1,30 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.json",
+  "count": 24,
+  "files": [
+    "001--com-example-rest.json",
+    "002--com-example-rest-hidden.json",
+    "003--my-example-template.json",
+    "004--my-example-dropdown.json",
+    "005--my-example-dropdown-1.json",
+    "006--my-example-dropdown-2.json",
+    "007--com-validated-inputs-task.json",
+    "008--com-example-rest-optional.json",
+    "009--messageeventtemplate.json",
+    "010--messageeventtemplatehidden.json",
+    "011--signaleventtemplate.json",
+    "012--signaleventtemplate-hidden.json",
+    "013--com-validated-inputs-conditional-task.json",
+    "014--taskdefinitiontemplate.json",
+    "015--calledelement.json",
+    "016--calleddecision.json",
+    "017--form-definition-template.json",
+    "018--script-task-task-definition.json",
+    "019--script-task-script.json",
+    "020--com-camunda-example-adhoc.json",
+    "021--my-example-non-existing-property.json",
+    "022--com-camunda-example-assignmentdefinition.json",
+    "023--com-camunda-example-prioritydefinition.json",
+    "024--com-camunda-example-taskschedule.json"
+  ]
+}

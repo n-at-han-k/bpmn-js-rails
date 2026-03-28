@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Custom ServiceTask",
+  "id": "com.camunda.example.CustomServiceTask",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Delegate to Call",
+      "type": "String",
+      "editable": false,
+      "value": "com.camunda.example.FooDelegate",
+      "binding": {
+        "type": "property",
+        "name": "camunda:delegateExpression"
+      }
+    }
+  ]
+}

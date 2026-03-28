@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "FEEL required",
+  "id": "booleanField.feel.required",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "BooleanProperty",
+      "type": "Boolean",
+      "feel": "required",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "BooleanProperty"
+      }
+    }
+  ]
+}

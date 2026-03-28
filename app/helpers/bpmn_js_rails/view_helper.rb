@@ -24,14 +24,6 @@ module BpmnJsRails
         tags << stylesheet_link_tag("form-js/form-js-editor", "data-turbo-track": "reload")
       end
 
-      if components.include?(:viewer)
-        tags << javascript_include_tag("form-js/form-viewer.umd", "data-turbo-track": "reload")
-      end
-
-      if components.include?(:editor)
-        tags << javascript_include_tag("form-js/form-editor.umd", "data-turbo-track": "reload")
-      end
-
       safe_join(tags, "\n")
     end
 
@@ -90,13 +82,12 @@ module BpmnJsRails
 
     # ── bpmn-js assets ───────────────────────────────────────────────
 
-    # Render <link> and <script> tags for bpmn-js assets.
+    # Render stylesheet <link> tags for bpmn-js assets.
     #
     #   <%= bpmn_js_assets %>                                             # viewer only
-    #   <%= bpmn_js_assets(:viewer, :modeler) %>                          # Camunda Platform modeler styles
-    #   <%= bpmn_js_assets(:viewer, :modeler, camunda_platform: false) %> # legacy core bpmn-js modeler script
+    #   <%= bpmn_js_assets(:viewer, :modeler) %>
     #
-    def bpmn_js_assets(*components, camunda_platform: true)
+    def bpmn_js_assets(*components)
       components = [ :viewer ] if components.empty?
       tags = []
 
@@ -104,20 +95,12 @@ module BpmnJsRails
       tags << stylesheet_link_tag("bpmn-js/bpmn-js", "data-turbo-track": "reload")
       tags << stylesheet_link_tag("bpmn-js/bpmn-font/css/bpmn-embedded", "data-turbo-track": "reload")
 
-      if components.include?(:viewer) && !components.include?(:modeler)
-        tags << javascript_include_tag("bpmn-js/bpmn-viewer.production.min", "data-turbo-track": "reload")
-      end
-
       if components.include?(:modeler)
         tags << stylesheet_link_tag("bpmn-js/diagram-js-minimap", "data-turbo-track": "reload")
         tags << stylesheet_link_tag("bpmn-js/properties-panel", "data-turbo-track": "reload")
         tags << stylesheet_link_tag("bpmn-js/color-picker", "data-turbo-track": "reload")
         tags << stylesheet_link_tag("bpmn-js/element-templates", "data-turbo-track": "reload")
         tags << stylesheet_link_tag("bpmn-js/element-template-chooser", "data-turbo-track": "reload")
-      end
-
-      if components.include?(:modeler) && !camunda_platform
-        tags << javascript_include_tag("bpmn-js/bpmn-modeler.production.min", "data-turbo-track": "reload")
       end
 
       safe_join(tags, "\n")
@@ -214,14 +197,6 @@ module BpmnJsRails
       if components.include?(:modeler)
         tags << stylesheet_link_tag("dmn-js/dmn-js-decision-table-controls", "data-turbo-track": "reload")
         tags << stylesheet_link_tag("dmn-js/dmn-js-boxed-expression-controls", "data-turbo-track": "reload")
-      end
-
-      if components.include?(:viewer) && !components.include?(:modeler)
-        tags << javascript_include_tag("dmn-js/dmn-viewer.production.min", "data-turbo-track": "reload")
-      end
-
-      if components.include?(:modeler)
-        tags << javascript_include_tag("dmn-js/dmn-modeler.production.min", "data-turbo-track": "reload")
       end
 
       safe_join(tags, "\n")

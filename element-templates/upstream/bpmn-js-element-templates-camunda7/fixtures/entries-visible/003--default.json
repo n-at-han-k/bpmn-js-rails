@@ -1,0 +1,9 @@
+{
+  "id": "default",
+  "name": "EntriesVisible unset",
+  "isDefault": true,
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": []
+}

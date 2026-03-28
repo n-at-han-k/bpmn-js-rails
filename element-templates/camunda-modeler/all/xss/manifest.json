@@ -1,0 +1,8 @@
+{
+  "source": "camunda-modeler/all/xss.json",
+  "count": 2,
+  "files": [
+    "001--com-camunda-example-xss.json",
+    "002--com-camunda-example-xss-img.json"
+  ]
+}

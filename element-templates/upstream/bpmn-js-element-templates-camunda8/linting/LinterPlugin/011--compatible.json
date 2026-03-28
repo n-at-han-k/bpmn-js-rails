@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "compatible",
+  "id": "compatible",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "engines": {
+    "camunda": ">1.0"
+  },
+  "properties": []
+}

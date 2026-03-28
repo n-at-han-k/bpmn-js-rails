@@ -1,0 +1,32 @@
+{
+  "name": "Conditional Event With Conditional Filter Template",
+  "id": "example.camunda.ConditionalEventWithConditionalFilter",
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:ConditionalEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Condition",
+      "type": "String",
+      "feel": "required",
+      "value": "=true",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#property",
+        "name": "condition"
+      }
+    },
+    {
+      "label": "Variable Events",
+      "type": "String",
+      "value": "create,update",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#zeebe:conditionalFilter#property",
+        "name": "variableEvents"
+      }
+    }
+  ]
+}

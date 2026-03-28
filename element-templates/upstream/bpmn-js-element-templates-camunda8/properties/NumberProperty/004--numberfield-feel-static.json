@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "FEEL static",
+  "id": "numberField.feel.static",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "NumberProperty",
+      "type": "Number",
+      "feel": "static",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "NumberProperty"
+      }
+    }
+  ]
+}

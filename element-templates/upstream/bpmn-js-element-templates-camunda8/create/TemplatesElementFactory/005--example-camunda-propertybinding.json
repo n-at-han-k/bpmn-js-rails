@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Property binding",
+  "id": "example.camunda.PropertyBinding",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "value": "name",
+      "binding": {
+        "type": "property",
+        "name": "name"
+      }
+    }
+  ]
+}

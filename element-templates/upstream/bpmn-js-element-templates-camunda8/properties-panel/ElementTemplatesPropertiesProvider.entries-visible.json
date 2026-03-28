@@ -1,0 +1,56 @@
+[
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "foo",
+    "name":"EntriesVisible=true",
+    "appliesTo": [ "bpmn:Task" ],
+    "properties": [],
+    "entriesVisible": true
+  },
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "foo",
+    "name":"EntriesVisible=false",
+    "version": 1,
+    "appliesTo": [ "bpmn:Task" ],
+    "properties": []
+  },
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "default",
+    "name": "EntriesVisible unset",
+    "isDefault": true,
+    "appliesTo": [ "bpmn:ServiceTask" ],
+    "properties": []
+  },
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "selective-outputs",
+    "name": "EntriesVisible={outputs:true}",
+    "appliesTo": [ "bpmn:ServiceTask" ],
+    "properties": [],
+    "entriesVisible": {
+      "outputs": true
+    }
+  },
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "hide-execution-listeners",
+    "name": "EntriesVisible={executionListeners:false}",
+    "appliesTo": [ "bpmn:ServiceTask" ],
+    "properties": [],
+    "entriesVisible": {
+      "executionListeners": false
+    }
+  },
+  {
+    "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+    "id": "show-task-listeners",
+    "name": "EntriesVisible={taskListeners:true}",
+    "appliesTo": [ "bpmn:UserTask" ],
+    "properties": [],
+    "entriesVisible": {
+      "taskListeners": true
+    }
+  }
+]

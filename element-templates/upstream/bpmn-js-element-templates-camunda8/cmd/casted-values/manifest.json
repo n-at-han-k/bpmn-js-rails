@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/cmd/casted-values.json",
+  "count": 2,
+  "files": [
+    "001--booleanfield-feel-optional.json",
+    "002--numberfield-feel-optional.json"
+  ]
+}

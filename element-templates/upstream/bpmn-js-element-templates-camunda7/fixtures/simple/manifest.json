@@ -1,0 +1,18 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/simple.json",
+  "count": 12,
+  "files": [
+    "001--foo.json",
+    "002--foo.json",
+    "003--foo.json",
+    "004--foo.json",
+    "005--bar.json",
+    "006--bar.json",
+    "007--baz.json",
+    "008--default.json",
+    "009--deprecated.json",
+    "010--qux.json",
+    "011--process-template.json",
+    "012--subprocess-template.json"
+  ]
+}

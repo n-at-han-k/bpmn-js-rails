@@ -1,0 +1,14 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/integration.json",
+  "count": 8,
+  "files": [
+    "001--templatea.json",
+    "002--templatea.json",
+    "003--templateb.json",
+    "004--templatebdropdown.json",
+    "005--io-camunda-connectors-httpjson-v2.json",
+    "006--io-camunda-connectors-httpjson-v1-basicauth.json",
+    "007--io-camunda-connectors-webhook-githubwebhookconnectormessagestart-v1.json",
+    "008--io-camunda-connectors-webhook-webhookconnector-v1.json"
+  ]
+}

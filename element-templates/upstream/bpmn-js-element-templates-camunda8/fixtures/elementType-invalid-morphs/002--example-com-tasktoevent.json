@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Element Type (Task -> Event)",
+  "id": "example.com.TaskToEvent",
+  "appliesTo": [
+    "bpmn:ServiceTask",
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent"
+  },
+  "properties": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "bar",
+  "name": "Bar 1",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

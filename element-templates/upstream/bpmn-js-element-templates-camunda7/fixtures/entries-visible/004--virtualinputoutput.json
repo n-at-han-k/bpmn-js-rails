@@ -1,0 +1,23 @@
+{
+  "id": "virtualInputOutput",
+  "name": "virtual input output",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "value": "input-1-value",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "input-1-name"
+      }
+    },
+    {
+      "value": "output-1-value",
+      "binding": {
+        "type": "camunda:outputParameter",
+        "source": "output-1-source"
+      }
+    }
+  ]
+}

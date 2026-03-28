@@ -1,0 +1,48 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Combined Execution + Task Listeners Template",
+  "version": 1,
+  "id": "combined-listeners-template",
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "entriesVisible": {
+    "executionListeners": false
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "=template-start",
+      "binding": {
+        "type": "zeebe:executionListener",
+        "eventType": "start",
+        "retries": "=3"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=template-end",
+      "binding": {
+        "type": "zeebe:executionListener",
+        "eventType": "end"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=template-creating",
+      "binding": {
+        "type": "zeebe:taskListener",
+        "eventType": "creating"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=template-completing",
+      "binding": {
+        "type": "zeebe:taskListener",
+        "eventType": "completing",
+        "retries": "=5"
+      }
+    }
+  ]
+}

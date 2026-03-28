@@ -1,0 +1,22 @@
+{
+  "name": "Timer Boundary Event Template",
+  "id": "example.camunda.TimerBoundaryEventTemplate",
+  "appliesTo": [
+    "bpmn:BoundaryEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:BoundaryEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Cycle Interval",
+      "type": "String",
+      "value": "R/PT5M",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeCycle"
+      }
+    }
+  ]
+}

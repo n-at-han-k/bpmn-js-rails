@@ -1,0 +1,57 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Default Errors Rendering",
+  "id": "com.camunda.example.DefaultErrorsRendering",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "external",
+      "binding": {
+        "type": "property",
+        "name": "camunda:type"
+      }
+    },
+    {
+      "value": "${true}",
+      "binding": {
+        "type": "camunda:errorEventDefinition",
+        "errorRef": "error-1"
+      }
+    }
+  ],
+  "scopes": [
+    {
+      "type": "bpmn:Error",
+      "id": "error-1",
+      "properties": [
+        {
+          "type": "Hidden",
+          "value": "500",
+          "binding": {
+            "type": "property",
+            "name": "errorCode"
+          }
+        },
+        {
+          "type": "Hidden",
+          "value": "an example error",
+          "binding": {
+            "type": "property",
+            "name": "camunda:errorMessage"
+          }
+        },
+        {
+          "type": "Hidden",
+          "value": "myError",
+          "binding": {
+            "type": "property",
+            "name": "name"
+          }
+        }
+      ]
+    }
+  ]
+}

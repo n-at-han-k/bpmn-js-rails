@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties-panel/ElementTemplatesPropertiesProvider.boolean.json",
+  "count": 2,
+  "files": [
+    "001--id.json",
+    "002--process.json"
+  ]
+}

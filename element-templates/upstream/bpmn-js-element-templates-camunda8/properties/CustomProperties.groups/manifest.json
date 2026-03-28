@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.groups.json",
+  "count": 6,
+  "files": [
+    "001--example-com-grouping.json",
+    "002--example-com-grouping-collapsed.json",
+    "003--example-com-grouping-nodefault.json",
+    "004--example-com-grouping-nogroups.json",
+    "005--example-com-grouping-noentries.json",
+    "006--example-com-grouping-nonexisting.json"
+  ]
+}

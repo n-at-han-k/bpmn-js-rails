@@ -1,0 +1,10 @@
+{
+  "$schema": "<define during runtime>",
+  "id": "bar",
+  "name": "Bar 2",
+  "version": 2,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

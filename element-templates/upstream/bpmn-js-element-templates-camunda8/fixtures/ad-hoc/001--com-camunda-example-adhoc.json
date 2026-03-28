@@ -1,0 +1,41 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "AdHoc",
+  "id": "com.camunda.example.AdHoc",
+  "appliesTo": [
+    "bpmn:Activity"
+  ],
+  "elementType": {
+    "value": "bpmn:AdHocSubProcess"
+  },
+  "properties": [
+    {
+      "label": "Ad-Hoc Job Worker",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskDefinition",
+        "property": "type"
+      },
+      "value": "ad-hoc-job-worker"
+    },
+    {
+      "label": "Output Collection",
+      "type": "String",
+      "value": "toolCallResults",
+      "binding": {
+        "type": "zeebe:adHoc",
+        "property": "outputCollection"
+      }
+    },
+    {
+      "label": "Output Element",
+      "type": "String",
+      "value": "=element.result",
+      "feel": "required",
+      "binding": {
+        "type": "zeebe:adHoc",
+        "property": "outputElement"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "non existing",
+  "id": "example.com.grouping-nonExisting",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "inputParameter",
+      "group": "foo",
+      "type": "String",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "input1"
+      }
+    },
+    {
+      "label": "inputParameter",
+      "group": "one",
+      "type": "String",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "input1"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "one",
+      "label": "Group one"
+    },
+    {
+      "id": "two",
+      "label": "Group two"
+    }
+  ]
+}

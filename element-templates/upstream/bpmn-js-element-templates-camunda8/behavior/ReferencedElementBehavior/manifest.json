@@ -1,0 +1,11 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/behavior/ReferencedElementBehavior.json",
+  "count": 5,
+  "files": [
+    "001--messageeventtemplate.json",
+    "002--anothermessageeventtemplate.json",
+    "003--blankintermediateevent.json",
+    "004--signaleventtemplate.json",
+    "005--anothersignaleventtemplate.json"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "SimpleErrorScope",
+  "id": "com.camunda.example.SimpleErrorScope",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [],
+  "scopes": [
+    {
+      "type": "bpmn:Error",
+      "id": "error-simple",
+      "properties": [
+        {
+          "label": "Error Code",
+          "type": "String",
+          "value": "my-code",
+          "binding": {
+            "type": "property",
+            "name": "errorCode"
+          }
+        },
+        {
+          "label": "Error Message",
+          "type": "String",
+          "value": "error-message",
+          "binding": {
+            "type": "property",
+            "name": "camunda:errorMessage"
+          }
+        },
+        {
+          "label": "Error Name",
+          "type": "String",
+          "value": "error-name",
+          "binding": {
+            "type": "property",
+            "name": "name"
+          }
+        }
+      ]
+    }
+  ]
+}

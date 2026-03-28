@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/properties/CustomProperties.editable.json",
+  "count": 1,
+  "files": [
+    "001--com-camunda-example-editable.json"
+  ]
+}

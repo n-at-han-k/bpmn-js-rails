@@ -1,0 +1,22 @@
+{
+  "id": "example.engines.test.incompatible",
+  "name": "<engines> Test - incompatible",
+  "description": "incompatible with all camunda versions",
+  "engines": {
+    "camunda": "0"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "label": "Custom Property 2",
+      "type": "String",
+      "value": "property-2-value",
+      "binding": {
+        "type": "camunda:property",
+        "name": "property-2-key"
+      }
+    }
+  ]
+}

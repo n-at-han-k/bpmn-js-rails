@@ -1,0 +1,22 @@
+{
+  "name": "OldAsyncAwesomeTask",
+  "id": "my.awesome.Task",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "documentationRef": "https://docs.camunda.io",
+  "properties": [
+    {
+      "id": "1",
+      "label": "Are you awesome?",
+      "type": "Boolean",
+      "value": true,
+      "binding": {
+        "type": "property",
+        "name": "camunda:asyncBefore"
+      }
+    }
+  ],
+  "entriesVisible": true,
+  "version": 1
+}

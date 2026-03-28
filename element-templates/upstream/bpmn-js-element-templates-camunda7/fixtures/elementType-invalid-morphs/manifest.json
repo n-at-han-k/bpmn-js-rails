@@ -1,0 +1,9 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/elementType-invalid-morphs.json",
+  "count": 3,
+  "files": [
+    "001--example-com-tasktogateway.json",
+    "002--example-com-tasktoevent.json",
+    "003--example-com-eventtoprocess.json"
+  ]
+}

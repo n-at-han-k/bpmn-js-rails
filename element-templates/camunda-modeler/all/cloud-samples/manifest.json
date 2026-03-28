@@ -1,0 +1,21 @@
+{
+  "source": "camunda-modeler/all/cloud-samples.json",
+  "count": 15,
+  "files": [
+    "001--io-camunda-examples-emailconnector.json",
+    "002--io-camunda-examples-restconnector.json",
+    "003--io-camunda-examples-conditionalrestconnector.json",
+    "004--io-camunda-examples-groups.json",
+    "005--io-camunda-examples-feel.json",
+    "006--io-camunda-examples-scriptworker.json",
+    "007--io-camunda-examples-paymenttask.json",
+    "008--io-camunda-examples-kafkatask.json",
+    "009--io-camunda-examples-withicon.json",
+    "010--io-camunda-examples-elementtype.json",
+    "011--io-camunda-examples-documentationref.json",
+    "012--io-camunda-examples-compatibility.json",
+    "013--io-camunda-examples-compatibility.json",
+    "014--io-camunda-examples-incompatible.json",
+    "015--conditional-event.json"
+  ]
+}

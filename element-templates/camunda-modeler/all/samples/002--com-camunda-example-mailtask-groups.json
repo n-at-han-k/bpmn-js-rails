@@ -1,0 +1,99 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "Mail Task (Groups)",
+  "id": "com.camunda.example.MailTask-groups",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Implementation Type",
+      "type": "String",
+      "group": "definition",
+      "value": "com.mycompany.MailTaskImpl",
+      "editable": false,
+      "binding": {
+        "type": "property",
+        "name": "camunda:class"
+      }
+    },
+    {
+      "label": "Sender",
+      "type": "String",
+      "group": "request",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "sender"
+      },
+      "constraints": {
+        "notEmpty": true,
+        "pattern": {
+          "value": "^[A-z0-9._%+-]+@[A-z0-9.-]+\\.[A-z]{2,}$",
+          "message": "Must be a valid email."
+        }
+      }
+    },
+    {
+      "label": "Receivers",
+      "type": "String",
+      "group": "request",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "receivers"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Template",
+      "description": "By the way, you can use <a href=\"https://freemarker.apache.org/\">freemarker templates</a> here",
+      "value": "Hello ${firstName}!",
+      "type": "Text",
+      "group": "request",
+      "binding": {
+        "type": "camunda:inputParameter",
+        "name": "messageBody",
+        "scriptFormat": "freemarker"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Result Status",
+      "description": "The process variable to which to assign the send result to",
+      "value": "mailSendResult",
+      "type": "String",
+      "group": "result",
+      "binding": {
+        "type": "camunda:outputParameter",
+        "source": "${ resultStatus }"
+      }
+    },
+    {
+      "label": "Send Async?",
+      "type": "Boolean",
+      "group": "definition",
+      "value": true,
+      "binding": {
+        "type": "property",
+        "name": "camunda:asyncBefore"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "definition",
+      "label": "Task definition"
+    },
+    {
+      "id": "request",
+      "label": "Request payload"
+    },
+    {
+      "id": "result",
+      "label": "Result mapping"
+    }
+  ]
+}

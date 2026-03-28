@@ -1,0 +1,26 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Start Date",
+  "id": "timer-start-date",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "id": "timerDate",
+      "label": "Timer Date",
+      "type": "String",
+      "feel": "required",
+      "value": "=now() + duration(\"PT1H\")",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDate"
+      }
+    }
+  ]
+}

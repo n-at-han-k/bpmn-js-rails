@@ -1,0 +1,54 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.camunda.examples.PaymentTask",
+  "name": "Payment task",
+  "description": "A payment task worker",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Job type",
+      "type": "String",
+      "value": "payment-service",
+      "group": "job-definition",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "label": "Method",
+      "value": "visa",
+      "type": "Dropdown",
+      "choices": [
+        {
+          "name": "American Express",
+          "value": "american-express"
+        },
+        {
+          "name": "Mastercard",
+          "value": "mastercard"
+        },
+        {
+          "name": "Visa",
+          "value": "visa"
+        }
+      ],
+      "group": "headers",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "method"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "job-definition",
+      "label": "Job definition"
+    },
+    {
+      "id": "headers",
+      "label": "Headers"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/simple-low-schema-version.json",
+  "count": 6,
+  "files": [
+    "001--foo.json",
+    "002--foo.json",
+    "003--foo.json",
+    "004--bar.json",
+    "005--bar.json",
+    "006--baz.json"
+  ]
+}

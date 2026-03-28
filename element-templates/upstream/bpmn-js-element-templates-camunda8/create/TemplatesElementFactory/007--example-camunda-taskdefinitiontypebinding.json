@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Task definition type binding",
+  "id": "example.camunda.TaskDefinitionTypeBinding",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "value": "job-type",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    }
+  ]
+}

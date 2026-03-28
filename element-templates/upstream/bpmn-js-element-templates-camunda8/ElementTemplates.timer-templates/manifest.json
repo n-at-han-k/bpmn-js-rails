@@ -1,0 +1,12 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/ElementTemplates.timer-templates.json",
+  "count": 6,
+  "files": [
+    "001--timer-cycle-start-template.json",
+    "002--timer-duration-start-template.json",
+    "003--timer-date-start-template.json",
+    "004--timer-cycle-boundary-template.json",
+    "005--timer-duration-boundary-template.json",
+    "006--non-timer-start-template.json"
+  ]
+}

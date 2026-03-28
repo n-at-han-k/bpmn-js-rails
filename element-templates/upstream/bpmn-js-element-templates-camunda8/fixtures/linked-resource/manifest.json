@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/linked-resource.json",
+  "count": 1,
+  "files": [
+    "001--linkedresource.json"
+  ]
+}

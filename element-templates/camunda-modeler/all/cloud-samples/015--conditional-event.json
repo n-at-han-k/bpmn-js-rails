@@ -1,0 +1,44 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Conditional Event",
+  "id": "conditional-event",
+  "version": 1,
+  "description": "Conditional event template",
+  "appliesTo": [
+    "bpmn:Event"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:ConditionalEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Condition Expression",
+      "type": "String",
+      "value": "=foo > 100",
+      "feel": "required",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#property",
+        "name": "condition"
+      }
+    },
+    {
+      "label": "Variable Names",
+      "type": "String",
+      "value": "foo,bar",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#zeebe:conditionalFilter#property",
+        "name": "variableNames"
+      }
+    },
+    {
+      "label": "Variable Events",
+      "type": "String",
+      "value": "create,update",
+      "binding": {
+        "type": "bpmn:ConditionalEventDefinition#zeebe:conditionalFilter#property",
+        "name": "variableEvents"
+      }
+    }
+  ]
+}

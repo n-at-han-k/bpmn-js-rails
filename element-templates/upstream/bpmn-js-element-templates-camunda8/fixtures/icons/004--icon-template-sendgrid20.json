@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "SendGrid Connector (20px)",
+  "id": "icon.template.sendgrid20",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [],
+  "icon": {
+    "contents": "data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42834 7.12082H7.15335V12.8458H1.42834V7.12082V7.12082Z' fill='white'/%3E%3Cpath d='M1.42834 7.12082H7.15335V12.8458H1.42834V7.12082V7.12082Z' fill='%2399E1F4'/%3E%3Cpath d='M7.15417 12.8458H12.8458V18.5375H7.15417V12.8458V12.8458Z' fill='white'/%3E%3Cpath d='M7.15417 12.8458H12.8458V18.5375H7.15417V12.8458V12.8458Z' fill='%2399E1F4'/%3E%3Cpath d='M1.42834 18.5383H7.15335V18.5717H1.42834V18.5383V18.5383ZM1.42834 12.8467H7.15335V18.5383H1.42834V12.8467V12.8467Z' fill='%231A82E2'/%3E%3Cpath d='M7.15417 1.42834H12.8458V7.12001H7.15417V1.42834V1.42834ZM12.8458 7.15334H18.5708V12.845H12.8458V7.15334V7.15334Z' fill='%2300B3E3'/%3E%3Cpath d='M7.15417 12.8458H12.8458V7.12082H7.15417V12.8458Z' fill='%23009DD9'/%3E%3Cpath d='M12.8458 1.42834H18.5708V7.12001H12.8458V1.42834V1.42834ZM12.8458 7.12084H18.5708V7.15418H12.8458V7.12084Z' fill='%231A82E2'/%3E%3C/svg%3E"
+  }
+}

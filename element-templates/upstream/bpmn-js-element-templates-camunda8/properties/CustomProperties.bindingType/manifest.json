@@ -1,0 +1,10 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.bindingType.json",
+  "count": 4,
+  "files": [
+    "001--io-camunda-examples-decision-bindingtype.json",
+    "002--io-camunda-examples-callactivity-bindingtype.json",
+    "003--io-camunda-examples-formdefinition-bindingtype.json",
+    "004--io-camunda-examples-linkedresource-bindingtype.json"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/icons.json",
+  "count": 10,
+  "files": [
+    "001--icon-template-salesforce.json",
+    "002--icon-template-rest.json",
+    "003--icon-template-sendgrid.json",
+    "004--icon-template-sendgrid20.json",
+    "005--icon-template-sendgrid18.json",
+    "006--icon-template-sendgrid16.json",
+    "007--icon-template-kafka.json",
+    "008--icon-template-jira.json",
+    "009--icon-template-dominos.json",
+    "010--icon-template-https-icon.json"
+  ]
+}

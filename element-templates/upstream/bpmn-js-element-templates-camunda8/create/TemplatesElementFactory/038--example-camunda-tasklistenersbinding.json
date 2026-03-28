@@ -1,0 +1,36 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Task Listeners Template",
+  "id": "example.camunda.TaskListenersBinding",
+  "appliesTo": [
+    "bpmn:UserTask"
+  ],
+  "entriesVisible": {
+    "taskListeners": false
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:userTask"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=on-creating-handler",
+      "binding": {
+        "type": "zeebe:taskListener",
+        "eventType": "creating"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "=on-completing-handler",
+      "binding": {
+        "type": "zeebe:taskListener",
+        "eventType": "completing",
+        "retries": "=5"
+      }
+    }
+  ]
+}

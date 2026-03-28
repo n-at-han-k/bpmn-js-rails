@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import DmnModeler from "bpmn_js_rails/dmn_modeler"
 
 // Connects to data-controller="dmn-js-modeler"
 //
@@ -26,14 +27,9 @@ export default class extends Controller {
   static targets = ["container", "xmlField"]
 
   async connect() {
-    if (typeof DmnJS === "undefined") {
-      console.error("[bpmn-js-rails] DmnJS global not found. Make sure dmn-modeler.production.min.js is loaded.")
-      return
-    }
-
     const renderTarget = this.hasContainerTarget ? this.containerTarget : this.element
 
-    this.modeler = new DmnJS({
+    this.modeler = new DmnModeler({
       container: renderTarget,
       keyboard: { bindTo: window }
     })

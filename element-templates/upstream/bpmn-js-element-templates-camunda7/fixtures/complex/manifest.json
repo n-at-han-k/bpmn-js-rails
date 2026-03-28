@@ -1,0 +1,23 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/complex.json",
+  "count": 17,
+  "files": [
+    "001--my-connector-task.json",
+    "002--my-mail-task.json",
+    "003--my-mail-task-groups.json",
+    "004--my-awesome-task.json",
+    "005--my-awesome-task.json",
+    "006--my-custom-servicetask.json",
+    "007--e-com-merce-fastpath.json",
+    "008--com-mycompany-wscaller.json",
+    "009--my-priority-task.json",
+    "010--com-validated-inputs-task.json",
+    "011--my-caller.json",
+    "012--my-execution-listener-task.json",
+    "013--com-camunda-example-customservicetaskfieldinjection.json",
+    "014--com-camunda-example-externalerrortask.json",
+    "015--com-camunda-example-simpleerrorscope.json",
+    "016--com-camunda-example-defaultrendering.json",
+    "017--com-camunda-example-documentationref.json"
+  ]
+}

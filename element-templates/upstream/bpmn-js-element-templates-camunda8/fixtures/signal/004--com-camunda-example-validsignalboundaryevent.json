@@ -1,0 +1,23 @@
+{
+  "name": "ValidSignalBoundaryEvent",
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "com.camunda.example.ValidSignalBoundaryEvent",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:Event"
+  ],
+  "elementType": {
+    "value": "bpmn:BoundaryEvent",
+    "eventDefinition": "bpmn:SignalEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Signal Name",
+      "type": "String",
+      "binding": {
+        "type": "bpmn:Signal#property",
+        "name": "name"
+      }
+    }
+  ]
+}

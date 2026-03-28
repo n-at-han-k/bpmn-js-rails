@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/mail-connector-templates.json",
+  "count": 1,
+  "files": [
+    "001--my-mail-task.json"
+  ]
+}

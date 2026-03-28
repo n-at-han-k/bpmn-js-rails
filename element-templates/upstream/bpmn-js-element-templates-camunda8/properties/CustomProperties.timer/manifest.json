@@ -1,0 +1,13 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/properties/CustomProperties.timer.json",
+  "count": 7,
+  "files": [
+    "001--timer-start-date.json",
+    "002--timer-start-cycle.json",
+    "003--timer-boundary-cycle.json",
+    "004--timer-subprocess-duration.json",
+    "005--timer-catch-date.json",
+    "006--timer-catch-duration.json",
+    "007--signaleventtemplate.json"
+  ]
+}

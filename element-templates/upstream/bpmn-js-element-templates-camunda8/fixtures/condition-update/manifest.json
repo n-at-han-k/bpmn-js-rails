@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/condition-update.json",
+  "count": 2,
+  "files": [
+    "001--example-com-condition.json",
+    "002--example-com-condition.json"
+  ]
+}

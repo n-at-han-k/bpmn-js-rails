@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "HTTPs Icon",
+  "id": "icon.template.https-icon",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [],
+  "icon": {
+    "contents": "https://user-images.githubusercontent.com/58601/160609748-cc18d1cc-aa32-43d0-bac3-058a9979aa5b.svg"
+  }
+}

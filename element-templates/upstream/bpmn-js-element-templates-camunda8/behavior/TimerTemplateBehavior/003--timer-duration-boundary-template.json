@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Duration Boundary Template",
+  "id": "timer-duration-boundary-template",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:BoundaryEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:BoundaryEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Duration",
+      "type": "String",
+      "value": "PT30M",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDuration"
+      }
+    }
+  ]
+}

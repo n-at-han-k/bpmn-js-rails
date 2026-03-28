@@ -1,0 +1,66 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.notify-email",
+  "name": "Kremlin Email Notification",
+  "description": "Send an email through an external worker.",
+  "version": 1,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "kremlin.notify.email",
+      "binding": {
+        "type": "zeebe:taskDefinition",
+        "property": "type"
+      }
+    },
+    {
+      "label": "To",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "to"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Subject",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "subject"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Body",
+      "type": "Text",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "CC",
+      "description": "Optional comma-separated recipient list.",
+      "type": "String",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:input",
+        "name": "cc"
+      }
+    }
+  ]
+}

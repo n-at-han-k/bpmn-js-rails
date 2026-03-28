@@ -1,0 +1,15 @@
+{
+  "id": "example.engines.test.multiple",
+  "name": "<engines> Test - Multiple",
+  "description": "does not match if { desktopModeler: >=1 } is provided",
+  "version": 2,
+  "engines": {
+    "camunda": "^7.13",
+    "webModeler": "^4.1",
+    "desktopModeler": "^0"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

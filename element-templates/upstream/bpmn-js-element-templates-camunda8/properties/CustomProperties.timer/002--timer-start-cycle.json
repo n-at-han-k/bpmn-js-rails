@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Start Cycle",
+  "id": "timer-start-cycle",
+  "version": 1,
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "id": "timerCycle",
+      "label": "Timer Cycle",
+      "type": "String",
+      "value": "R/PT5M",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeCycle"
+      }
+    }
+  ]
+}

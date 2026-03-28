@@ -1,0 +1,68 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "External Service Task (with Errors)",
+  "id": "com.camunda.example.ExternalServiceTaskWithErrors",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "binding": {
+        "name": "camunda:type",
+        "type": "property"
+      },
+      "type": "Hidden",
+      "value": "external"
+    },
+    {
+      "binding": {
+        "name": "camunda:topic",
+        "type": "property"
+      },
+      "label": "External Task Topic",
+      "type": "String",
+      "value": "task-topic"
+    },
+    {
+      "value": "expression-value",
+      "label": "Error Expression",
+      "type": "String",
+      "binding": {
+        "type": "camunda:errorEventDefinition",
+        "errorRef": "Error_1"
+      }
+    }
+  ],
+  "scopes": [
+    {
+      "type": "bpmn:Error",
+      "id": "Error_1",
+      "properties": [
+        {
+          "value": "error-code",
+          "label": "Error Code",
+          "binding": {
+            "type": "property",
+            "name": "errorCode"
+          }
+        },
+        {
+          "value": "error-message",
+          "label": "Error Message",
+          "binding": {
+            "type": "property",
+            "name": "camunda:errorMessage"
+          }
+        },
+        {
+          "value": "error-name",
+          "label": "Error Name",
+          "binding": {
+            "type": "property",
+            "name": "name"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Timer Start Event - Cycle (Cron)",
+  "id": "io.camunda.examples.TimerStartCycleCron",
+  "version": 1,
+  "description": "A timer start event that triggers on a cron schedule",
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "icon": {
+    "contents": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23205cf5' d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z'/%3E%3C/svg%3E"
+  },
+  "properties": [
+    {
+      "id": "cronExpression",
+      "label": "Cron Expression",
+      "description": "A cron expression defining when the timer fires (e.g., '0 0 9 * * MON-FRI' for 9 AM on weekdays)",
+      "type": "String",
+      "value": "0 0 9 * * MON-FRI",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeCycle"
+      }
+    }
+  ]
+}

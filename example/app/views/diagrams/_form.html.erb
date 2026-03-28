@@ -27,8 +27,47 @@
 
   <h3>Diagram Modeler</h3>
 
-  <div style="border: 1px solid #ddd; border-radius: 4px; margin-bottom: 16px;">
-    <%= bpmn_js_modeler(diagram, field_name: "diagram[xml]") %>
+  <% element_templates = [
+    {
+      id: "example.service-task",
+      name: "Service Task (Example)",
+      appliesTo: ["bpmn:ServiceTask"],
+      properties: [
+        {
+          label: "Task Name",
+          type: "String",
+          binding: { type: "property", name: "name" }
+        }
+      ]
+    }
+  ] %>
+
+  <div
+    data-controller="modeler-tools"
+    data-action="bpmn-js-modeler:ready->modeler-tools#setModeler"
+    style="border: 1px solid #ddd; border-radius: 4px; margin-bottom: 16px;"
+  >
+    <%= bpmn_js_modeler(
+      diagram,
+      field_name: "diagram[xml]",
+      data: {
+        bpmn_js_modeler_native_copy_paste_enabled_value: true,
+        bpmn_js_modeler_element_template_chooser_enabled_value: true,
+        bpmn_js_modeler_element_templates_value: element_templates.to_json
+      }
+    ) %>
+
+    <div style="display: flex; gap: 8px; align-items: center; padding: 8px 12px; border-top: 1px solid #eee;">
+      <button
+        type="button"
+        data-action="click->modeler-tools#openTemplateChooser"
+        style="padding: 6px 12px; cursor: pointer;"
+      >
+        Open Template Chooser
+      </button>
+
+      <span data-modeler-tools-target="status" style="font-size: 13px; color: #666;">Modeler loading...</span>
+    </div>
   </div>
 
   <div>

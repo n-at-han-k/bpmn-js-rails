@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/properties/OutputProperties.json",
+  "count": 2,
+  "files": [
+    "001--my-domain-simpleworkertask.json",
+    "002--my-domain-simpleworkertaskwithcamundaproperty.json"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/error-execution-listener-invalid-type.json",
+  "count": 1,
+  "files": [
+    "001--my-execution-listener-task.json"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/properties/CustomProperties.missing-types.json",
+  "count": 1,
+  "files": [
+    "001--com-mycompany-whateverdomain-defaulttypes.json"
+  ]
+}

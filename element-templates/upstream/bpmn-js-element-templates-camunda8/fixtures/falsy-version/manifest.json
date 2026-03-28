@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda8/fixtures/falsy-version.json",
+  "count": 2,
+  "files": [
+    "001--falsy-template.json",
+    "002--falsy-template.json"
+  ]
+}

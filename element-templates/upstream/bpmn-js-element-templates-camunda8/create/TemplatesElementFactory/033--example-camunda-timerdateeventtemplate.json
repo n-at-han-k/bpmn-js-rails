@@ -1,0 +1,23 @@
+{
+  "name": "Timer Date Event Template",
+  "id": "example.camunda.TimerDateEventTemplate",
+  "appliesTo": [
+    "bpmn:IntermediateCatchEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:TimerEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "Date",
+      "type": "String",
+      "feel": "required",
+      "value": "=now() + duration(\"PT1H\")",
+      "binding": {
+        "type": "bpmn:TimerEventDefinition#property",
+        "name": "timeDate"
+      }
+    }
+  ]
+}

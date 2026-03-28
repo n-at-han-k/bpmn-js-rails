@@ -1,0 +1,8 @@
+{
+  "source": "upstream/bpmn-js-element-templates-camunda7/fixtures/error-id-version-duplicate.json",
+  "count": 2,
+  "files": [
+    "001--foo.json",
+    "002--foo.json"
+  ]
+}

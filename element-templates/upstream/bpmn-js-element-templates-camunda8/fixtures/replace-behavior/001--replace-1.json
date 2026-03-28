@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "replace_1",
+  "id": "replace_1",
+  "appliesTo": [
+    "bpmn:Task",
+    "bpmn:CallActivity"
+  ],
+  "properties": []
+}

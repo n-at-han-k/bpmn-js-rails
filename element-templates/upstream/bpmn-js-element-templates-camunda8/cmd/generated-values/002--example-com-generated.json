@@ -1,0 +1,37 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Message Property",
+  "id": "example.com.generated",
+  "description": "A template.",
+  "appliesTo": [
+    "bpmn:Event"
+  ],
+  "elementType": {
+    "value": "bpmn:IntermediateCatchEvent",
+    "eventDefinition": "bpmn:MessageEventDefinition"
+  },
+  "properties": [
+    {
+      "label": "message name",
+      "type": "Hidden",
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "bpmn:Message#property",
+        "name": "name"
+      }
+    },
+    {
+      "label": "correlation key",
+      "type": "Hidden",
+      "generatedValue": {
+        "type": "uuid"
+      },
+      "binding": {
+        "type": "bpmn:Message#zeebe:subscription#property",
+        "name": "correlationKey"
+      }
+    }
+  ]
+}

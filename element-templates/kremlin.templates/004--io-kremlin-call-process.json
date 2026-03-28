@@ -1,0 +1,52 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "id": "io.kremlin.call-process",
+  "name": "Kremlin Call Activity",
+  "description": "Call another process definition with explicit variable propagation.",
+  "version": 1,
+  "engines": {
+    "camunda": "^8.6"
+  },
+  "appliesTo": [
+    "bpmn:CallActivity"
+  ],
+  "properties": [
+    {
+      "label": "Process ID",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:calledElement",
+        "property": "processId"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "latest",
+      "binding": {
+        "type": "zeebe:calledElement",
+        "property": "bindingType"
+      }
+    },
+    {
+      "label": "Inherit all parent variables",
+      "type": "Boolean",
+      "value": true,
+      "binding": {
+        "type": "zeebe:calledElement",
+        "property": "propagateAllParentVariables"
+      }
+    },
+    {
+      "label": "Propagate all child variables",
+      "type": "Boolean",
+      "value": true,
+      "binding": {
+        "type": "zeebe:calledElement",
+        "property": "propagateAllChildVariables"
+      }
+    }
+  ]
+}

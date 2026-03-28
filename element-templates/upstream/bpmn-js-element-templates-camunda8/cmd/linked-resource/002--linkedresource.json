@@ -1,0 +1,33 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "linkedResource v2",
+  "id": "linkedResource",
+  "version": 2,
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "properties": [
+    {
+      "type": "String",
+      "value": "RPA",
+      "binding": {
+        "type": "zeebe:linkedResource",
+        "linkName": "persistedLink",
+        "property": "resourceType"
+      }
+    },
+    {
+      "type": "String",
+      "feel": "optional",
+      "value": "changed",
+      "binding": {
+        "type": "zeebe:linkedResource",
+        "linkName": "persistedLink",
+        "property": "resourceId"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "<define during runtime>",
+  "id": "baz",
+  "name": "Baz",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": []
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://unpkg.com/@camunda/element-templates-json-schema/resources/schema.json",
+  "name": "WS Caller Task",
+  "id": "com.camunda.example.WsCaller",
+  "description": "Requires the user to provide a Web Service URL.",
+  "appliesTo": [
+    "bpmn:ServiceTask"
+  ],
+  "properties": [
+    {
+      "label": "Web Service URL",
+      "description": "Specify the url of the web service to talk to.",
+      "type": "String",
+      "binding": {
+        "type": "camunda:property",
+        "name": "webServiceUrl"
+      },
+      "constraints": {
+        "notEmpty": true,
+        "pattern": {
+          "value": "^https://.*",
+          "message": "Must be https URL."
+        }
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "com.camunda.example.WsCaller",
+      "binding": {
+        "type": "property",
+        "name": "camunda:class"
+      }
+    }
+  ]
+}
