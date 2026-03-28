@@ -1,5 +1,5 @@
 BpmnJsRails::Engine.routes.draw do
-  resources :diagrams, path: "processes"
+  resources :processes
   resources :forms
   resources :decisions
 end

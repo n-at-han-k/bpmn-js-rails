@@ -6,7 +6,7 @@ module BpmnJsRails
       include Rails::Generators::Migration
       source_root File.expand_path("templates", __dir__)
 
-      desc "Install BpmnJsRails: copy migrations for forms, diagrams, and decisions"
+      desc "Install BpmnJsRails: copy migrations for forms, processes, and decisions"
 
       def self.next_migration_number(dirname)
         next_migration_nr = current_migration_number(dirname) + 1
@@ -20,8 +20,8 @@ module BpmnJsRails
         )
 
         migration_template(
-          "create_bpmn_js_rails_diagrams.rb.erb",
-          "db/migrate/create_bpmn_js_rails_diagrams.rb"
+          "create_bpmn_js_rails_processes.rb.erb",
+          "db/migrate/create_bpmn_js_rails_processes.rb"
         )
 
         migration_template(
@@ -42,10 +42,10 @@ module BpmnJsRails
         say "    - Viewer:         <%= form_js_viewer(@form) %>"
         say "    - Editor:         <%= form_js_editor(@form, field_name: 'form[schema]') %>"
         say ""
-        say "  Diagrams (bpmn-js):"
+        say "  Processes (bpmn-js):"
         say "    - Add to layout:  <%= bpmn_js_assets %>"
-        say "    - Viewer:         <%= bpmn_js_viewer(@diagram) %>"
-        say "    - Modeler:        <%= bpmn_js_modeler(@diagram, field_name: 'diagram[xml]') %>"
+        say "    - Viewer:         <%= bpmn_js_viewer(@process) %>"
+        say "    - Modeler:        <%= bpmn_js_modeler(@process, field_name: 'process[xml]') %>"
         say ""
         say "  Decisions (dmn-js):"
         say "    - Add to layout:  <%= dmn_js_assets %>"

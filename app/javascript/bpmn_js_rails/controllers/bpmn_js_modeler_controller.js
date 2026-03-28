@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import CamundaPlatformModeler from "bpmn_js_rails/vendor/camunda_platform_modeler"
 
 // Connects to data-controller="bpmn-js-modeler"
 //
@@ -20,20 +21,24 @@ import { Controller } from "@hotwired/stimulus"
 //
 export default class extends Controller {
   static values = {
-    xml: { type: String, default: "" }
+    xml: { type: String, default: "" },
+    propertiesPanelEnabled: { type: Boolean, default: true }
   }
 
-  static targets = ["container", "xmlField"]
+  static targets = ["container", "propertiesPanel", "xmlField"]
 
   async connect() {
-    if (typeof BpmnJS === "undefined") {
-      console.error("[bpmn-js-rails] BpmnJS global not found. Make sure bpmn-modeler.production.min.js is loaded.")
-      return
-    }
-
     const renderTarget = this.hasContainerTarget ? this.containerTarget : this.element
 
-    this.modeler = new BpmnJS({ container: renderTarget })
+    const modelerOptions = {
+      container: renderTarget
+    }
+
+    if (this.propertiesPanelEnabledValue && this.hasPropertiesPanelTarget) {
+      modelerOptions.propertiesPanel = { parent: this.propertiesPanelTarget }
+    }
+
+    this.modeler = new CamundaPlatformModeler(modelerOptions)
 
     if (this.xmlValue) {
       try {
@@ -82,4 +87,5 @@ export default class extends Controller {
       // modeler may be mid-import; ignore
     }
   }
+
 }

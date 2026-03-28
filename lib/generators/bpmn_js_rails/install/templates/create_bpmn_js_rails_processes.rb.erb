@@ -1,0 +1,15 @@
+class CreateBpmnJsRailsProcesses < ActiveRecord::Migration[<%= ActiveRecord::Migration.current_version %>]
+  def change
+    create_table :bpmn_js_rails_processes do |t|
+      t.string :name, null: false
+      t.text :description
+      t.text :xml, null: false
+      t.string :status, null: false, default: "draft"
+      t.integer :version, null: false, default: 1
+
+      t.timestamps
+    end
+
+    add_index :bpmn_js_rails_processes, :status
+  end
+end

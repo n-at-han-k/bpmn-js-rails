@@ -92,10 +92,11 @@ module BpmnJsRails
 
     # Render <link> and <script> tags for bpmn-js assets.
     #
-    #   <%= bpmn_js_assets %>                      # viewer only
-    #   <%= bpmn_js_assets(:viewer, :modeler) %>   # both viewer and modeler
+    #   <%= bpmn_js_assets %>                                             # viewer only
+    #   <%= bpmn_js_assets(:viewer, :modeler) %>                          # Camunda Platform modeler styles
+    #   <%= bpmn_js_assets(:viewer, :modeler, camunda_platform: false) %> # legacy core bpmn-js modeler script
     #
-    def bpmn_js_assets(*components)
+    def bpmn_js_assets(*components, camunda_platform: true)
       components = [ :viewer ] if components.empty?
       tags = []
 
@@ -108,19 +109,27 @@ module BpmnJsRails
       end
 
       if components.include?(:modeler)
+        tags << stylesheet_link_tag("bpmn-js/diagram-js-minimap", "data-turbo-track": "reload")
+        tags << stylesheet_link_tag("bpmn-js/properties-panel", "data-turbo-track": "reload")
+        tags << stylesheet_link_tag("bpmn-js/color-picker", "data-turbo-track": "reload")
+        tags << stylesheet_link_tag("bpmn-js/element-templates", "data-turbo-track": "reload")
+        tags << stylesheet_link_tag("bpmn-js/element-template-chooser", "data-turbo-track": "reload")
+      end
+
+      if components.include?(:modeler) && !camunda_platform
         tags << javascript_include_tag("bpmn-js/bpmn-modeler.production.min", "data-turbo-track": "reload")
       end
 
       safe_join(tags, "\n")
     end
 
-    # Render a bpmn-js viewer that displays a BPMN diagram (read-only).
+    # Render a bpmn-js viewer that displays a BPMN process (read-only).
     #
-    #   <%= bpmn_js_viewer(@diagram) %>
+    #   <%= bpmn_js_viewer(@process) %>
     #   <%= bpmn_js_viewer("<bpmn:definitions ...>...</bpmn:definitions>") %>
     #
-    def bpmn_js_viewer(diagram_or_xml, **html_options)
-      xml = extract_xml(diagram_or_xml)
+    def bpmn_js_viewer(process_or_xml, **html_options)
+      xml = extract_xml(process_or_xml)
 
       html_options[:class] = Array(html_options[:class]).push("bpmn-js-viewer-container").join(" ")
       html_options[:style] = [ html_options[:style], "height: 500px" ].compact.join("; ")
@@ -133,24 +142,42 @@ module BpmnJsRails
       content_tag(:div, "", **html_options)
     end
 
-    # Render a bpmn-js modeler for designing BPMN diagrams.
+    # Render a bpmn-js modeler for designing BPMN processes.
     #
-    #   <%= bpmn_js_modeler(@diagram) %>
-    #   <%= bpmn_js_modeler(@diagram, field_name: "diagram[xml]") %>
+    #   <%= bpmn_js_modeler(@process) %>
+    #   <%= bpmn_js_modeler(@process, field_name: "process[xml]") %>
+    #   <%= bpmn_js_modeler(@process, properties_panel: false) %>
     #
-    def bpmn_js_modeler(diagram_or_xml, field_name: nil, **html_options)
-      xml = extract_xml(diagram_or_xml)
+    def bpmn_js_modeler(process_or_xml, field_name: nil, properties_panel: true, **html_options)
+      xml = extract_xml(process_or_xml)
 
       html_options[:class] = Array(html_options[:class]).push("bpmn-js-modeler-container").join(" ")
+      html_options[:style] = [ html_options[:style], "position: relative", "height: 500px" ].compact.join("; ")
 
       html_options[:data] = (html_options[:data] || {}).merge(
         controller: "bpmn-js-modeler",
-        bpmn_js_modeler_xml_value: xml
+        bpmn_js_modeler_xml_value: xml,
+        bpmn_js_modeler_properties_panel_enabled_value: properties_panel
       )
 
       content_tag(:div, **html_options) do
         children = []
-        children << content_tag(:div, "", style: "height: 500px", data: { bpmn_js_modeler_target: "container" })
+
+        children << content_tag(:div, style: "display: flex; height: 100%") do
+          canvas = content_tag(:div, "", style: "flex: 1 1 auto; height: 100%", data: { bpmn_js_modeler_target: "container" })
+
+          if properties_panel
+            panel = content_tag(
+              :div,
+              "",
+              style: "flex: 0 0 320px; height: 100%; border-left: 1px solid #ddd; overflow: auto",
+              data: { bpmn_js_modeler_target: "propertiesPanel" }
+            )
+            safe_join([ canvas, panel ])
+          else
+            canvas
+          end
+        end
 
         if field_name
           children << tag.input(
@@ -253,12 +280,12 @@ module BpmnJsRails
 
     # ── PascalCase helpers for .html.ruby views ─────────────────
 
-    def BpmnJsViewer(diagram_or_xml, **html_options)
-      output_buffer << bpmn_js_viewer(diagram_or_xml, **html_options)
+    def BpmnJsViewer(process_or_xml, **html_options)
+      output_buffer << bpmn_js_viewer(process_or_xml, **html_options)
     end
 
-    def BpmnJsModeler(diagram_or_xml, field_name: nil, **html_options)
-      output_buffer << bpmn_js_modeler(diagram_or_xml, field_name: field_name, **html_options)
+    def BpmnJsModeler(process_or_xml, field_name: nil, properties_panel: true, **html_options)
+      output_buffer << bpmn_js_modeler(process_or_xml, field_name: field_name, properties_panel: properties_panel, **html_options)
     end
 
     def FormJsViewer(form_or_schema, data: {}, **html_options)
@@ -292,14 +319,14 @@ module BpmnJsRails
       end
     end
 
-    def extract_xml(diagram_or_xml)
-      case diagram_or_xml
-      when BpmnJsRails::Diagram
-        diagram_or_xml.xml || BpmnJsRails::Diagram::DEFAULT_XML
+    def extract_xml(process_or_xml)
+      case process_or_xml
+      when BpmnJsRails::Process
+        process_or_xml.xml || BpmnJsRails::Process::DEFAULT_XML
       when String
-        diagram_or_xml
+        process_or_xml
       else
-        diagram_or_xml.try(:xml) || BpmnJsRails::Diagram::DEFAULT_XML
+        process_or_xml.try(:xml) || BpmnJsRails::Process::DEFAULT_XML
       end
     end
 
